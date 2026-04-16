@@ -1,0 +1,2775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SF Cable – Your trusted source for bulk cables, adapters, connectors, HDMI, USB, network cables, and power cords. Free shipping over $75. Lifetime warranty. Same-day shipping available." />
+  <meta name="keywords" content="bulk cables, HDMI cables, USB cables, network cables, fiber optics, power cords, adapters, connectors, wholesale cables, SF Cable" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="SF Cable – Cables, Adapters & Connectors | Wholesale Pricing" />
+  <meta property="og:description" content="Shop 10,000+ cables, adapters, and networking products at wholesale prices. Free shipping over $75. Lifetime warranty on cables." />
+  <meta property="og:image" content="https://www.sfcable.com/media/logo/stores/1/SF-Cable-official-logo.png" />
+  <meta property="og:type" content="website" />
+  <title>SF Cable – Cables, Adapters & Connectors | Wholesale Pricing</title>
+  <link rel="canonical" href="https://www.sfcable.com/" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+    ============================================================ */
+    :root {
+      --red:         #FF7A00;
+      --red-dark:    #e06a00;
+      --red-light:   #fff3e6;
+      --dark:        #0B2A4A;
+      --dark-2:      #133a5e;
+      --gray-700:    #1F2937;
+      --gray-500:    #4b5563;
+      --gray-300:    #d1d5db;
+      --gray-100:    #F5F7FA;
+      --gray-50:     #F5F7FA;
+      --white:       #ffffff;
+      --blue:        #1a8fc4;
+      --blue-light:  #e6f5fc;
+      --green:       #16a34a;
+      --green-light: #f0fdf4;
+      --yellow:      #f59e0b;
+
+      --font-heading: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font:        'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --radius-sm:   8px;
+      --radius:      10px;
+      --radius-lg:   14px;
+      --radius-xl:   20px;
+      --control-h:   44px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow:      0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg:   0 10px 40px rgba(0,0,0,.14);
+      --transition:  0.2s ease;
+      --max-w:       1280px;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font);
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    button, input, select, textarea { font-family: var(--font); }
+    button { cursor: pointer; border: none; background: none; }
+
+    /* Global focus-visible ring for keyboard accessibility */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+    [role="tab"]:focus-visible, [role="option"]:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 2px;
+    }
+    /* Skip to content link */
+    .skip-link {
+      position: absolute; top: -100%; left: 16px; z-index: 9999;
+      background: var(--dark); color: var(--white); padding: 12px 24px;
+      border-radius: var(--radius-sm); font-weight: 600; font-size: 14px;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* ============================================================
+       UTILITY CLASSES
+    ============================================================ */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; width: 100%; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      height: var(--control-h); padding: 0 24px; border-radius: 100px; font-size: 14px; font-weight: 600;
+      transition: all var(--transition); white-space: nowrap; font-family: var(--font);
+    }
+    .btn-primary { background: var(--red); color: var(--white); }
+    .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255,122,0,.35); }
+    .btn-outline { border: 2px solid var(--red); color: var(--red); }
+    .btn-outline:hover { background: var(--red); color: var(--white); }
+    .btn-dark { background: var(--dark); color: var(--white); }
+    .btn-dark:hover { background: var(--dark-2); }
+    .btn-lg { height: 50px; padding: 0 32px; font-size: 15px; border-radius: 100px; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: .3px; }
+    .badge-red { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
+    .badge-green { background: #e8faf0; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-yellow { background: #fefce8; color: #a16207; border: 1px solid #fde68a; }
+    .section { padding: 80px 0; }
+    .section-sm { padding: 56px 0; }
+    .section-title { font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: var(--dark); line-height: 1.2; }
+    .section-subtitle { font-size: 16px; color: var(--gray-500); margin-top: 10px; }
+    .section-header { margin-bottom: 48px; }
+    .section-header-row { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .tag-label {
+      display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--red); margin-bottom: 10px;
+    }
+
+    /* ============================================================
+       BAR 1 — TOP UTILITY BAR
+    ============================================================ */
+    .bar1 {
+      background: var(--dark); height: 34px;
+      display: flex; align-items: center; font-size: 13px; color: #ccc;
+    }
+    .bar1 .container { display: flex; align-items: center; justify-content: space-between; }
+    .bar1-left { display: flex; align-items: center; gap: 20px; }
+    .bar1-right { display: flex; align-items: center; gap: 16px; }
+    .bar1-item { display: flex; align-items: center; gap: 6px; color: #ccc; }
+    .bar1-item i { font-size: 12px; color: var(--red); }
+    .bar1-sep { width: 1px; height: 14px; background: #444; }
+    .bar1 a { color: #ccc; transition: color var(--transition); text-decoration: none; }
+    .bar1 a:hover { color: #fff; }
+    .bar1 .bar1-quote { color: var(--red); font-weight: 600; }
+    .bar1 .bar1-quote:hover { text-decoration: underline; color: var(--red); }
+
+    /* ============================================================
+       BAR 2 — MIDDLE BAR (Logo + Search + Actions)
+    ============================================================ */
+    .bar2 {
+      background: var(--white); border-bottom: 1px solid var(--gray-300);
+      padding: 16px 0; position: sticky; top: 0; z-index: 1000;
+      transition: box-shadow 0.2s ease, transform 0.3s ease;
+    }
+    .bar2.scrolled { box-shadow: var(--shadow); }
+    .bar2.hidden { transform: translateY(-100%); pointer-events: none; }
+    .bar2-inner {
+      display: grid; grid-template-columns: auto 1fr auto;
+      align-items: center; gap: 24px;
+    }
+    .logo { flex-shrink: 0; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .logo img { height: 38px; width: auto; }
+    .logo-wordmark { font-size: 22px; font-weight: 800; color: var(--dark); font-family: var(--font-heading); }
+
+    /* Search */
+    .search-wrap { position: relative; width: 100%; max-width: 600px; margin: 0 auto; }
+    .search-form {
+      display: flex; width: 100%; height: var(--control-h);
+      border: 2px solid var(--gray-300); border-radius: 100px;
+      overflow: hidden; transition: border-color var(--transition);
+    }
+    .search-form:focus-within { border-color: var(--red); }
+    .search-input {
+      flex: 1; border: none; height: 100%; padding: 0 16px; font-size: 14px;
+      outline: none; color: var(--dark); font-family: var(--font); min-width: 0;
+    }
+    .search-input::placeholder { color: var(--gray-500); font-size: 14px; }
+    .search-btn {
+      background: var(--red); color: var(--white); border: none;
+      width: 48px; font-size: 16px; cursor: pointer;
+      transition: background var(--transition); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .search-btn:hover { background: var(--red-dark); }
+
+    /* Quick-access pills below search */
+    .search-pills {
+      display: flex; gap: 12px; margin-top: 6px; justify-content: center; flex-wrap: wrap;
+    }
+    .search-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11px; color: var(--gray-700); font-weight: 600; text-decoration: none;
+      background: var(--gray-100); padding: 3px 10px; border-radius: 100px;
+      transition: all var(--transition);
+    }
+    .search-pill:hover { background: var(--red-light); color: var(--red); }
+    .search-pill-dot {
+      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+    }
+
+    /* Predictive dropdown */
+    .search-dropdown {
+      position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+      background: #fff; border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg); border: 1px solid var(--gray-300);
+      z-index: 1001; display: none; overflow: hidden;
+      max-height: 420px; overflow-y: auto;
+    }
+    .search-dropdown.open { display: block; }
+    .sdd-header { padding: 10px 16px 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gray-500); border-bottom: 1px solid var(--gray-300); }
+    .sdd-item { display: flex; align-items: center; gap: 12px; padding: 10px 16px; cursor: pointer; transition: background var(--transition); text-decoration: none; color: var(--dark); }
+    .sdd-item:hover { background: var(--gray-100); }
+    .sdd-thumb { width: 44px; height: 44px; border-radius: 4px; background: var(--gray-50); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; border: 1px solid var(--gray-300); }
+    .sdd-thumb img { width: 100%; height: 100%; object-fit: contain; }
+    .sdd-info { flex: 1; min-width: 0; }
+    .sdd-name { font-size: 14px; font-weight: 600; color: var(--dark); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sdd-name mark { background: rgba(45,170,225,.18); color: var(--dark); border-radius: 2px; padding: 0 1px; }
+    .sdd-meta { font-size: 11px; color: var(--gray-500); margin-top: 2px; display: flex; gap: 6px; align-items: center; }
+    .sdd-sku { font-family: monospace; font-size: 10px; color: var(--blue); background: var(--blue-light); padding: 1px 5px; border-radius: 3px; }
+    .sdd-cat { font-size: 10px; color: var(--gray-500); }
+    .sdd-price { font-size: 14px; font-weight: 700; color: var(--dark); white-space: nowrap; flex-shrink: 0; }
+    .sdd-footer { display: block; text-align: center; padding: 12px; font-size: 14px; font-weight: 600; color: var(--red); border-top: 1px solid var(--gray-300); transition: background var(--transition); text-decoration: none; }
+    .sdd-footer:hover { background: var(--red-light); }
+    .sdd-empty { padding: 24px; text-align: center; color: var(--gray-500); font-size: 14px; }
+    .sdd-empty i { font-size: 24px; color: var(--gray-300); display: block; margin-bottom: 8px; }
+
+    /* Action icons */
+    .bar2-actions { display: flex; align-items: center; gap: 8px; }
+    .bar2-action {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      text-decoration: none; color: var(--gray-700); font-size: 11px; font-weight: 500;
+      padding: 8px 12px; border-radius: var(--radius-sm); position: relative;
+      transition: all var(--transition);
+    }
+    .bar2-action:hover { background: var(--gray-100); color: var(--red); }
+    .bar2-action i { font-size: 20px; }
+    .cart-badge {
+      position: absolute; top: 4px; right: 8px;
+      background: var(--red); color: var(--white);
+      font-size: 10px; font-weight: 700; min-width: 18px; height: 18px;
+      border-radius: 100px; display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ============================================================
+       BAR 3 — BOTTOM NAV BAR
+    ============================================================ */
+    .bar3 {
+      background: var(--dark); height: 44px;
+      position: sticky; top: 0; z-index: 999;
+      transition: top 0.3s ease;
+    }
+    .bar3-inner {
+      display: flex; align-items: center; height: 100%;
+      padding: 0 16px; max-width: var(--max-w); margin: 0 auto;
+    }
+    .bar3-links {
+      display: flex; align-items: center; flex: 1; height: 100%;
+    }
+    .bar3-item {
+      position: relative; height: 100%; display: flex; align-items: center;
+    }
+    .bar3-link {
+      display: flex; align-items: center; gap: 6px;
+      padding: 0 20px; height: 100%; color: #e5e7eb; font-size: 14px; font-weight: 500;
+      text-decoration: none; white-space: nowrap; font-family: var(--font);
+      transition: background 0.15s ease, color 0.15s ease;
+      border-bottom: 2px solid transparent;
+    }
+    .bar3-link:hover { background: rgba(255,255,255,.08); color: var(--white); }
+    .bar3-link.active, .bar3-item.open > .bar3-link { color: var(--red); border-bottom-color: var(--red); }
+    .bar3-chev { font-size: 10px; color: rgba(255,255,255,.45); margin-left: 2px; transition: transform 0.2s ease; }
+    .bar3-item.open .bar3-chev { transform: rotate(180deg); }
+    .bar3-quote {
+      margin-left: auto; height: 100%;
+      display: flex; align-items: center; gap: 6px;
+      padding: 0 20px; background: var(--red); color: var(--white);
+      font-size: 14px; font-weight: 600; text-decoration: none; font-family: var(--font);
+      transition: background var(--transition);
+    }
+    .bar3-quote:hover { background: var(--red-dark); }
+
+    /* Mega-menu panel */
+    .mega-panel {
+      position: absolute; top: 44px; left: 0; right: 0; width: 100vw;
+      background: var(--white); border-top: 2px solid var(--red);
+      box-shadow: 0 6px 20px rgba(0,0,0,.12);
+      padding: 24px 0; z-index: 200;
+      display: none;
+    }
+    .mega-panel.open { display: block; }
+    .mega-panel.biz-panel { background: #FAFAFE; border-top-color: #534AB7; }
+    .mega-cols {
+      display: grid; gap: 28px; max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+    }
+    .mega-cols-5 { grid-template-columns: repeat(5, 1fr); }
+    .mega-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .mega-col-head {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--dark); font-family: var(--font);
+      border-bottom: 1px solid #F0EFEA; padding-bottom: 6px; margin-bottom: 8px;
+    }
+    .mega-col a {
+      display: block; font-size: 14px; color: #4B4B48; line-height: 1.8;
+      text-decoration: none; transition: color 0.15s ease, padding-left 0.15s ease;
+    }
+    .mega-col a:hover { color: #185FA5; padding-left: 2px; }
+    .mega-viewall { color: #185FA5; font-weight: 600; margin-top: 8px; display: inline-block; }
+    .mega-featured {
+      background: #F8F7FF; border-left: 3px solid #534AB7;
+      padding: 10px 12px; border-radius: 4px; margin-bottom: 12px;
+    }
+    .mega-featured h4 { font-size: 14px; font-weight: 600; color: var(--dark); margin-bottom: 2px; font-family: var(--font-heading); }
+    .mega-featured p { font-size: 11px; color: #666; margin: 0 0 4px; }
+    .mega-featured a { color: #534AB7; font-weight: 600; font-size: 12px; }
+
+    /* Mobile hamburger */
+    .bar3-hamburger {
+      display: none; align-items: center; justify-content: center;
+      width: 44px; height: 44px; color: #fff; font-size: 20px; cursor: pointer;
+      background: none; border: none;
+    }
+    /* Mobile drawer */
+    .drawer-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.5);
+      z-index: 9998; display: none;
+    }
+    .drawer-overlay.open { display: block; }
+    .drawer {
+      position: fixed; top: 0; left: 0; bottom: 0;
+      width: min(85vw, 360px); background: #fff; z-index: 9999;
+      transform: translateX(-100%); transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+      display: flex; flex-direction: column; overflow-y: auto;
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px; border-bottom: 1px solid var(--gray-300);
+    }
+    .drawer-header .logo-wordmark { font-size: 18px; }
+    .drawer-close {
+      width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--gray-500); cursor: pointer; background: none; border: none;
+    }
+    .drawer-nav { flex: 1; padding: 8px 0; }
+    .drawer-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 16px; font-size: 15px; font-weight: 500; color: var(--dark);
+      border-bottom: 1px solid var(--gray-300); text-decoration: none;
+    }
+    .drawer-link:hover { background: var(--gray-100); }
+    .drawer-link-deals { color: var(--red); }
+    .drawer-sub { display: none; padding: 0 16px 8px; }
+    .drawer-sub.open { display: block; }
+    .drawer-sub a {
+      display: block; padding: 8px 0; font-size: 14px; color: #4B4B48;
+      text-decoration: none; border-bottom: 1px solid var(--gray-100);
+    }
+    .drawer-sub a:hover { color: #185FA5; }
+    .drawer-footer {
+      padding: 16px; border-top: 1px solid var(--gray-300);
+    }
+    .drawer-footer .btn { width: 100%; margin-bottom: 8px; }
+    .drawer-footer-links { display: flex; gap: 8px; }
+    .drawer-footer-links a {
+      flex: 1; text-align: center; padding: 10px; border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm); font-size: 12px; color: var(--gray-700);
+      text-decoration: none; font-weight: 500;
+    }
+    .drawer-footer-phone { text-align: center; margin-top: 10px; font-size: 12px; color: #999; }
+
+    /* Responsive header */
+    @media (max-width: 1023px) {
+      .bar1 { font-size: 10px; }
+      .bar1-hours { display: none; }
+      .bar3-link { padding: 0 12px; font-size: 13px; }
+      .bar3-quote span { display: none; }
+      .mega-cols-5 { grid-template-columns: repeat(3, 1fr); }
+      .mega-cols-4 { grid-template-columns: repeat(3, 1fr); }
+      .search-pills { display: none; }
+    }
+    @media (max-width: 767px) {
+      .bar1 { display: none; }
+      .bar2 { padding: 8px 0; }
+      .bar2-inner { display: flex; align-items: center; gap: 8px; }
+      .logo { flex-shrink: 0; }
+      .logo img { height: 28px; }
+      .search-wrap { flex: 1; min-width: 0; max-width: none; }
+      .search-form { height: 36px; }
+      .search-input { font-size: 13px; padding: 0 10px; }
+      .search-btn { width: 36px; font-size: 14px; }
+      .search-pills { display: none; }
+      .bar2-actions { flex-shrink: 0; gap: 2px; }
+      .bar2-action { padding: 4px 6px; }
+      .bar2-action span { display: none; }
+      .bar2-action i { font-size: 16px; }
+      .bar2-action-quickorder { display: none; }
+      .cart-badge { top: 0; right: 2px; min-width: 14px; height: 14px; font-size: 8px; }
+      .bar3 { height: 40px; }
+      .bar3-links { display: none; }
+      .bar3-quote { display: none; }
+      .bar3-hamburger { display: flex; }
+      .bar3-inner { justify-content: space-between; }
+      .bar3-mini-logo { display: flex !important; }
+      .mega-panel { display: none !important; }
+    }
+
+    /* ============================================================
+       HERO SLIDER
+    ============================================================ */
+    .hero {
+      background: linear-gradient(135deg, #061a30 0%, var(--dark) 40%, #0d3560 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 50% 70% at 75% 50%, rgba(45,170,225,.1) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(255,122,0,.06) 0%, transparent 50%);
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0; opacity: .03;
+      background-image:
+        linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    /* Slider mechanics */
+    .hero-slider { position: relative; z-index: 2; overflow: hidden; }
+    .hero-track {
+      display: flex; transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+    }
+    .hero-slide {
+      flex: 0 0 100%; min-width: 0;
+    }
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+      padding: 72px 0 64px; text-align: left;
+    }
+    /* Slide content */
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(45,170,225,.15); border: 1px solid rgba(45,170,225,.35);
+      color: #93c5fd; padding: 6px 14px; border-radius: 100px;
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 3.5vw, 44px); font-weight: 800; line-height: 1.15;
+      color: var(--white); margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 16px; color: #cbd5e1; line-height: 1.7; margin-bottom: 16px;
+      max-width: 480px;
+    }
+    .hero-trust-line {
+      font-size: 14px; color: #9ca3af; margin-bottom: 28px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .hero-trust-line i { color: var(--red); font-size: 12px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      height: 50px; padding: 0 28px; border-radius: 100px; font-size: 14px; font-weight: 600;
+      font-family: var(--font);
+      background: rgba(255,255,255,.1); color: var(--white);
+      border: 1px solid rgba(255,255,255,.25);
+      transition: all var(--transition); white-space: nowrap;
+    }
+    .hero-btn-secondary:hover {
+      background: rgba(255,255,255,.2); border-color: rgba(255,255,255,.4);
+    }
+    /* Slide image */
+    .hero-img {
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-img img {
+      max-height: 320px; width: auto; object-fit: contain;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,.3));
+    }
+    /* Slider dots */
+    .hero-dots {
+      position: relative; z-index: 3;
+      display: flex; gap: 10px; justify-content: center;
+      padding-bottom: 28px;
+    }
+    .hero-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(255,255,255,.3); border: none; cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .hero-dot.active { background: var(--red); width: 28px; border-radius: 100px; }
+    .hero-dot:hover { background: rgba(255,255,255,.6); }
+    .hero-dot.active:hover { background: var(--red); }
+
+    /* ============================================================
+       TRUST BAR
+    ============================================================ */
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-300);
+      padding: 24px 0;
+    }
+    .trust-items {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 0;
+    }
+    .trust-item {
+      display: flex; align-items: center; text-align: left;
+      gap: 12px; padding: 12px 14px;
+      border-right: 1px solid var(--gray-300);
+    }
+    .trust-item:last-child { border-right: none; }
+    .trust-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--red-light); display: flex; align-items: center;
+      justify-content: center; flex-shrink: 0;
+    }
+    .trust-icon i { font-size: 18px; color: var(--red); }
+    .trust-item h3 { font-size: 14px; font-weight: 700; color: var(--dark); line-height: 1.3; font-family: var(--font); }
+    .trust-item p { font-size: 12px; color: var(--gray-500); margin-top: 2px; line-height: 1.4; }
+
+    /* ============================================================
+       CATEGORIES
+    ============================================================ */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .category-card {
+      border-radius: var(--radius); overflow: hidden;
+      background: var(--white); border: 1px solid var(--gray-300);
+      transition: all 0.3s cubic-bezier(.4,0,.2,1);
+      padding: 16px; text-decoration: none;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .category-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,.07);
+      border-color: var(--dark);
+      transform: translateY(-3px);
+    }
+    .cat-img-wrap {
+      width: 96px; height: 96px; border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; background: var(--white); overflow: hidden; padding: 6px;
+    }
+    .cat-img-wrap img {
+      width: 100%; height: 100%; object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+    .cat-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .category-card h3 { font-size: 15px; font-weight: 600; color: var(--dark); line-height: 1.3; }
+    .cat-count { font-size: 12px; color: var(--gray-500); font-weight: 500; }
+
+    /* ============================================================
+       FEATURED PRODUCTS
+    ============================================================ */
+    .products-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
+    }
+    .product-card {
+      background: var(--white); border: 1px solid var(--gray-300);
+      border-radius: var(--radius-lg); overflow: visible;
+      transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1), border-color 0.3s ease;
+      position: relative;
+    }
+    .product-card:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,.1); border-color: var(--dark);
+      transform: translateY(-6px);
+    }
+
+    /* Image area */
+    .product-img-wrap {
+      background: var(--white); padding: 28px 24px;
+      display: flex; align-items: center; justify-content: center;
+      height: 200px; position: relative; overflow: visible;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    .product-img-wrap img {
+      max-height: 148px; width: auto; object-fit: contain;
+      transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+      mix-blend-mode: multiply;
+    }
+    .product-card:hover .product-img-wrap img { transform: scale(1.06); }
+
+    /* Badges */
+    .product-badges {
+      position: absolute; top: 12px; left: 12px; display: flex; flex-direction: column; gap: 4px;
+    }
+
+    /* Hover action bar (favorite, compare, view) */
+    .product-hover-bar {
+      position: absolute; bottom: 14px; left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      display: flex; gap: 0;
+      background: #ffffff; border: 1px solid #d1d5db;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,.18);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      isolation: isolate; mix-blend-mode: normal; z-index: 5;
+      overflow: visible;
+    }
+    .product-card:hover .product-hover-bar { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+    .product-action-btn {
+      position: relative;
+      width: 44px; height: 42px;
+      background: #ffffff; border: none; border-right: 1px solid #e5e7eb;
+      display: flex; align-items: center; justify-content: center;
+      color: #4b5563; font-size: 16px; cursor: pointer;
+      transition: color 0.2s ease, background-color 0.2s ease;
+      mix-blend-mode: normal;
+    }
+    .product-action-btn:last-child { border-right: none; }
+    .product-action-btn:hover {
+      color: #FF7A00; background-color: #fff3e6;
+    }
+    .product-action-btn:active { background-color: #ffe4cc; }
+
+    /* Tooltips for action buttons */
+    .product-action-btn::after {
+      content: attr(data-tooltip);
+      position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%);
+      background: #000000; color: #ffffff; font-size: 11px; font-weight: 600;
+      padding: 5px 12px; border-radius: 6px; white-space: nowrap;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.15s ease;
+      z-index: 10; mix-blend-mode: normal;
+    }
+    .product-action-btn:hover::after { opacity: 1; }
+
+    /* Product info area */
+    .product-info { padding: 16px 18px 14px; background: var(--white); }
+    .product-name {
+      font-size: 15px; font-weight: 600; color: var(--dark); margin: 0 0 8px;
+      line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .product-name a { color: inherit; transition: color 0.2s ease; }
+    .product-name a:hover { color: var(--red); }
+    .product-rating { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+    .stars { display: inline-flex; gap: 2px; font-size: 14px; }
+    .stars .fa-star { color: #f59e0b; }
+    .stars .fa-star-half-stroke { color: #f59e0b; }
+    .stars .star-empty { color: var(--gray-300); }
+    .rating-count { font-size: 12px; color: var(--gray-500); }
+    .product-price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .price-current { font-size: 18px; font-weight: 800; color: var(--dark); }
+    .price-old { font-size: 14px; color: var(--gray-500); text-decoration: line-through; }
+    .price-save { font-size: 12px; color: #15803d; font-weight: 600; }
+
+    /* Footer actions */
+    .product-footer {
+      padding: 12px 18px 14px; border-top: 1px solid var(--gray-300);
+      display: flex; gap: 8px;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      background: var(--white);
+    }
+    .fav-btn {
+      width: var(--control-h); height: var(--control-h); flex-shrink: 0;
+      border: 1px solid var(--gray-300); color: var(--gray-500);
+      border-radius: 100px; font-size: 16px; background: var(--white);
+      transition: all 0.25s cubic-bezier(.4,0,.2,1);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .fav-btn:hover {
+      color: var(--red); border-color: var(--red); background: var(--red-light);
+    }
+    .fav-btn:active { transform: scale(0.92); }
+    .add-to-cart {
+      flex: 1; background: var(--red); color: var(--white); height: var(--control-h); padding: 0 16px;
+      border-radius: 100px; font-size: 14px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      transition: all 0.25s cubic-bezier(.4,0,.2,1);
+      box-shadow: 0 1px 3px rgba(255,122,0,.2); font-family: var(--font);
+    }
+    .add-to-cart:hover {
+      background: var(--red-dark); box-shadow: 0 4px 14px rgba(255,122,0,.35);
+      transform: translateY(-1px);
+    }
+    .add-to-cart:active { transform: translateY(0); box-shadow: none; }
+
+    /* ============================================================
+       SHOP BY APPLICATION (Tab-based)
+    ============================================================ */
+    .app-section { background: var(--gray-50); }
+    .app-tabs {
+      display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 32px;
+    }
+    .app-tab {
+      height: 38px; padding: 0 20px; border-radius: 100px; font-size: 14px; font-weight: 600;
+      font-family: var(--font);
+      border: 1px solid var(--gray-300); background: var(--white); color: var(--gray-700);
+      cursor: pointer; transition: all var(--transition); white-space: nowrap;
+    }
+    .app-tab:hover { border-color: var(--red); color: var(--red); background: var(--red-light); }
+    .app-tab.active { background: var(--red); color: var(--white); border-color: var(--red); }
+    .app-panel {
+      display: none; border: 1px solid var(--gray-300); border-radius: var(--radius-lg);
+      background: var(--white); overflow: hidden;
+    }
+    .app-panel.active { display: grid; grid-template-columns: 1fr 1fr; }
+    .app-panel-img {
+      background: var(--gray-100); display: flex; align-items: center; justify-content: center;
+      min-height: 320px; overflow: hidden;
+    }
+    .app-panel-img img { width: 100%; height: 100%; object-fit: cover; }
+    .app-panel-body {
+      padding: 40px 44px; display: flex; flex-direction: column; justify-content: center; gap: 16px;
+    }
+    .app-panel-body h3 { font-size: 24px; font-weight: 800; color: var(--dark); line-height: 1.2; }
+    .app-panel-body p { font-size: 15px; color: var(--gray-500); line-height: 1.7; margin: 0; }
+    .app-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .app-chip {
+      display: inline-block; padding: 4px 12px; border-radius: 100px;
+      font-size: 12px; font-weight: 600; color: var(--gray-700);
+      background: var(--gray-100); border: 1px solid var(--gray-300);
+    }
+    .app-panel-cta {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 8px;
+    }
+    @media (max-width: 900px) {
+      .app-panel.active { grid-template-columns: 1fr; }
+      .app-panel-img { min-height: 220px; }
+      .app-panel-body { padding: 28px 24px; }
+    }
+    @media (max-width: 768px) {
+      .app-tabs { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px; }
+      .app-tabs::-webkit-scrollbar { display: none; }
+    }
+    @media (max-width: 480px) {
+      .app-panel-body h3 { font-size: 20px; }
+      .app-panel-img { min-height: 180px; }
+      .app-panel-body { padding: 24px 20px; }
+    }
+
+    /* ============================================================
+       FEATURED PRODUCTS SLIDER
+    ============================================================ */
+    .slider-section { background: var(--gray-50); }
+    .slider-wrap { position: relative; }
+    .slider-track {
+      display: flex; gap: 22px; overflow-x: auto;
+      scroll-behavior: smooth; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; padding-bottom: 4px;
+    }
+    .slider-track::-webkit-scrollbar { display: none; }
+    .slider-track .product-card {
+      flex: 0 0 calc(25% - 16.5px); scroll-snap-align: start;
+      min-width: 260px;
+    }
+    .slider-nav {
+      position: absolute; top: 50%; z-index: 10;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--white); border: 1px solid var(--gray-300);
+      box-shadow: 0 2px 10px rgba(0,0,0,.1);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--dark); font-size: 14px; cursor: pointer;
+      transition: all 0.25s cubic-bezier(.4,0,.2,1);
+      transform: translateY(-50%);
+    }
+    .slider-nav:hover {
+      background: var(--dark); color: var(--white); border-color: var(--dark);
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+    }
+    .slider-nav:active { transform: translateY(-50%) scale(0.95); }
+    .slider-nav-prev { left: -20px; }
+    .slider-nav-next { right: -20px; }
+    @media (max-width: 900px) {
+      .slider-track .product-card { flex: 0 0 calc(33.333% - 15px); }
+      .slider-nav-prev { left: -8px; }
+      .slider-nav-next { right: -8px; }
+    }
+    @media (max-width: 768px) {
+      .slider-track .product-card { flex: 0 0 calc(50% - 11px); min-width: 220px; }
+      .slider-nav { width: 36px; height: 36px; font-size: 13px; }
+      .slider-nav-prev { left: -4px; }
+      .slider-nav-next { right: -4px; }
+    }
+    @media (max-width: 480px) {
+      .slider-track .product-card { flex: 0 0 85%; min-width: 0; }
+      .slider-nav { display: none; }
+    }
+
+    /* ============================================================
+       BUSINESS / BULK SOLUTIONS
+    ============================================================ */
+    .bulk-section {
+      background: linear-gradient(135deg, var(--dark) 0%, #0d3560 100%);
+      position: relative; overflow: hidden;
+    }
+    .bulk-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(255,122,0,.06) 0%, transparent 60%);
+    }
+    .bulk-inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .bulk-content { color: var(--white); }
+    .bulk-content .tag-label { color: var(--red); }
+    .bulk-content h2 {
+      font-size: clamp(24px, 3vw, 36px); font-weight: 800; line-height: 1.2;
+      color: var(--white); margin-bottom: 16px;
+    }
+    .bulk-content > p {
+      font-size: 16px; color: #cbd5e1; line-height: 1.7; margin-bottom: 28px;
+      max-width: 460px;
+    }
+    .bulk-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .bulk-ctas .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      height: 50px; padding: 0 32px; border-radius: 100px; font-size: 15px; font-weight: 600;
+      font-family: var(--font);
+      background: rgba(255,255,255,.1); color: var(--white);
+      border: 1px solid rgba(255,255,255,.25);
+      transition: all var(--transition);
+    }
+    .bulk-ctas .btn-secondary:hover {
+      background: rgba(255,255,255,.2); border-color: rgba(255,255,255,.4);
+    }
+    .bulk-values {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .bulk-value {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px 24px; background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius);
+      transition: all 0.3s ease;
+    }
+    .bulk-value:hover {
+      background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.2);
+    }
+    .bulk-value-icon {
+      width: 44px; height: 44px; border-radius: var(--radius-sm); flex-shrink: 0;
+      background: rgba(255,122,0,.15); display: flex; align-items: center; justify-content: center;
+    }
+    .bulk-value-icon i { font-size: 18px; color: var(--red); }
+    .bulk-value h3 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .bulk-value p { font-size: 14px; color: #9ca3af; line-height: 1.5; margin: 0; }
+    @media (max-width: 900px) {
+      .bulk-inner { grid-template-columns: 1fr; gap: 36px; }
+    }
+    @media (max-width: 480px) {
+      .bulk-ctas { flex-direction: column; }
+    }
+
+    /* ============================================================
+       WHY SF CABLE
+    ============================================================ */
+    .why-section { background: var(--gray-50); }
+    .why-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: center;
+    }
+    .why-content h2 { margin-bottom: 16px; }
+    .why-features { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+    .why-feature {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 18px 20px; background: var(--white);
+      border-radius: var(--radius); border: 1px solid var(--gray-300);
+      transition: all var(--transition);
+    }
+    .why-feature:hover { border-color: var(--red); box-shadow: var(--shadow-sm); }
+    .why-feature-icon {
+      width: 44px; height: 44px; border-radius: var(--radius-sm);
+      background: var(--red-light); display: flex; align-items: center;
+      justify-content: center; flex-shrink: 0;
+    }
+    .why-feature-icon i { font-size: 18px; color: var(--red); }
+    .why-feature h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .why-feature p { font-size: 14px; color: var(--gray-500); line-height: 1.5; }
+    /* Stats grid */
+    .why-stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .why-stat {
+      background: var(--white); border-radius: var(--radius-lg); padding: 28px 24px;
+      text-align: center; border: 1px solid var(--gray-300);
+      transition: all var(--transition);
+    }
+    .why-stat:hover { border-color: var(--red); box-shadow: var(--shadow); }
+    .why-stat-icon { font-size: 28px; color: var(--red); margin-bottom: 12px; }
+    .why-stat-number { font-size: 36px; font-weight: 800; color: var(--dark); line-height: 1; }
+    .why-stat-suffix { font-size: 20px; font-weight: 800; color: var(--red); }
+    .why-stat-label { font-size: 14px; color: var(--gray-500); margin-top: 6px; }
+    /* Certifications */
+    .certs-strip {
+      margin-top: 32px; padding: 20px 24px;
+      background: var(--dark); border-radius: var(--radius-lg);
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .certs-label { color: #9ca3af; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+    .cert-badge {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+      padding: 6px 12px; border-radius: 100px; color: var(--white); font-size: 12px; font-weight: 600;
+    }
+    .cert-badge i { color: var(--yellow); }
+
+    /* ============================================================
+       PROMOTIONAL DEALS
+    ============================================================ */
+    .deals-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .deal-card {
+      border-radius: var(--radius-xl); overflow: hidden; position: relative;
+      min-height: 240px; display: flex; align-items: center; padding: 32px;
+    }
+    .deal-card-bg {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .deal-card-overlay {
+      position: absolute; inset: 0; z-index: 1;
+    }
+    .deal-card-content { position: relative; z-index: 2; max-width: 65%; }
+    .deal-1 .deal-card-bg { background: url('images/buymore.jpg') center right/cover no-repeat; }
+    .deal-1 .deal-card-overlay { background: linear-gradient(to right, rgba(11,42,74,.92) 0%, rgba(11,42,74,.75) 45%, rgba(11,42,74,.25) 80%, transparent 100%); }
+    .deal-2 .deal-card-bg { background: url('images/pricing.jpg') center right/cover no-repeat; }
+    .deal-2 .deal-card-overlay { background: linear-gradient(to right, rgba(11,42,74,.92) 0%, rgba(11,42,74,.75) 45%, rgba(11,42,74,.25) 80%, transparent 100%); }
+    .deal-tag { color: var(--yellow); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .deal-card h3 { color: var(--white); font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    .deal-card p { color: rgba(255,255,255,.85); font-size: 14px; margin-bottom: 18px; line-height: 1.6; }
+    .deal-floating-badge {
+      position: absolute; top: 24px; right: 24px; z-index: 3;
+      width: 70px; height: 70px; border-radius: 50%;
+      background: var(--red); display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(255,122,0,.5);
+    }
+    .deal-floating-badge span:first-child { color: var(--white); font-size: 11px; font-weight: 600; }
+    .deal-floating-badge span:last-child  { color: var(--white); font-size: 20px; font-weight: 800; line-height: 1; }
+
+    /* ============================================================
+       INDUSTRY USE CASES
+    ============================================================ */
+    .industry-section { background: var(--dark); }
+    .industry-section .section-title { color: var(--white); }
+    .industry-section .section-subtitle { color: #9ca3af; }
+    .industry-section .tag-label { color: var(--red); }
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 48px;
+    }
+    .industry-card {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-lg); padding: 24px 16px; text-align: center;
+      transition: all var(--transition);
+    }
+    .industry-card:hover {
+      background: rgba(255,122,0,.1); border-color: rgba(255,122,0,.4);
+      transform: translateY(-4px);
+    }
+    .industry-card i { font-size: 32px; color: #9ca3af; margin-bottom: 12px; transition: color var(--transition); }
+    .industry-card:hover i { color: var(--red); }
+    .industry-card h3 { color: var(--white); font-size: 14px; font-weight: 600; }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .reviews-section { background: var(--gray-50); }
+    .reviews-layout {
+      display: grid; grid-template-columns: 280px 1fr; gap: 32px; align-items: start;
+    }
+    /* Left: Trustpilot summary card */
+    .reviews-aggregate {
+      text-align: center;
+      background: var(--white); border: 1px solid var(--gray-300);
+      border-radius: var(--radius-lg); padding: 32px 28px;
+      position: sticky; top: 120px;
+    }
+    .tp-logo { margin: 0 auto 16px; height: 28px; width: auto; }
+    .agg-score { font-size: 52px; font-weight: 800; color: var(--dark); line-height: 1; }
+    .agg-stars { color: #f59e0b; font-size: 20px; margin: 8px 0 6px; display: flex; gap: 3px; justify-content: center; }
+    .agg-count { font-size: 12px; color: var(--gray-500); }
+    .agg-label { font-size: 11px; color: var(--gray-500); margin-top: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    /* Right: Review slider */
+    .review-slider-wrap { position: relative; overflow: hidden; }
+    .review-slider-track {
+      display: flex; transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .review-slide {
+      flex: 0 0 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      min-width: 0;
+    }
+    .review-card {
+      background: var(--white); border: 1px solid var(--gray-300);
+      border-radius: var(--radius-lg); padding: 20px;
+      transition: all var(--transition); display: flex; flex-direction: column;
+    }
+    .review-card:hover { box-shadow: var(--shadow); }
+    .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .reviewer-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; color: var(--white); flex-shrink: 0;
+    }
+    .reviewer-name { font-weight: 700; font-size: 14px; color: var(--dark); }
+    .reviewer-company { font-size: 11px; color: var(--gray-500); margin-top: 1px; }
+    .review-stars { color: #f59e0b; font-size: 13px; margin-bottom: 8px; display: flex; gap: 2px; }
+    .review-text { font-size: 14px; color: var(--gray-700); line-height: 1.6; font-style: italic; flex: 1; }
+    .review-tag { margin-top: 10px; }
+    .review-verified { font-size: 11px; color: var(--green); font-weight: 600; }
+    .review-verified i { margin-right: 3px; }
+    /* Slider dots */
+    .review-dots {
+      display: flex; gap: 8px; justify-content: center; margin-top: 20px;
+    }
+    .review-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--gray-300);
+      border: none; cursor: pointer; transition: all 0.3s ease;
+    }
+    .review-dot.active { background: var(--red); width: 24px; border-radius: 100px; }
+    @media (max-width: 900px) {
+      .reviews-layout { grid-template-columns: 1fr; }
+      .reviews-aggregate { position: static; max-width: 280px; margin: 0 auto; }
+      .review-slide { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .review-slide { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       SEO CONTENT / FAQ
+    ============================================================ */
+    .seo-section { background: var(--white); }
+    .seo-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; align-items: start; }
+    .seo-content h2 { font-size: 26px; font-weight: 800; margin-bottom: 16px; }
+    .seo-content p { font-size: 15px; color: var(--gray-700); line-height: 1.75; margin-bottom: 14px; }
+    .seo-content h3 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--gray-300); }
+    .faq-question {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; padding: 18px 0; background: none; text-align: left;
+      font-size: 15px; font-weight: 600; color: var(--dark); cursor: pointer;
+      transition: color var(--transition);
+    }
+    .faq-question:hover { color: var(--red); }
+    .faq-question i { font-size: 14px; color: var(--red); flex-shrink: 0; transition: transform var(--transition); }
+    .faq-question.open i { transform: rotate(180deg); }
+    .faq-answer {
+      font-size: 14px; color: var(--gray-700); line-height: 1.7;
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-answer.open { max-height: 200px; padding-bottom: 16px; }
+
+    /* ============================================================
+       NEWSLETTER
+    ============================================================ */
+    .newsletter-section {
+      background: linear-gradient(135deg, var(--dark) 0%, #0d3560 100%);
+      padding: 32px 0;
+    }
+    .newsletter-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+    }
+    .newsletter-content h2 { color: var(--white); font-size: 32px; font-weight: 800; margin-bottom: 6px; }
+    .newsletter-content p { color: #9ca3af; font-size: 14px; line-height: 1.5; }
+    .newsletter-perks { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+    .newsletter-perk { display: flex; align-items: center; gap: 6px; color: #d1d5db; font-size: 12px; }
+    .newsletter-perk i { color: var(--red); font-size: 11px; }
+    .newsletter-form { display: flex; flex-direction: column; gap: 8px; }
+    .newsletter-row { display: flex; gap: 8px; }
+    .newsletter-input {
+      flex: 1; height: 40px; padding: 0 18px; border-radius: 100px;
+      border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.08);
+      color: var(--white); font-size: 14px; font-family: var(--font);
+      outline: none; transition: border-color var(--transition);
+    }
+    .newsletter-input::placeholder { color: #9ca3af; }
+    .newsletter-input:focus { border-color: var(--red); }
+    .newsletter-note { font-size: 11px; color: #6b7280; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .site-footer { background: #111; color: #9ca3af; padding: 72px 0 0; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px;
+      padding-bottom: 48px; border-bottom: 1px solid #222;
+    }
+    .footer-brand img { height: 42px; margin-bottom: 18px; filter: brightness(0) invert(1); opacity: .9; }
+    .footer-brand-name {
+      font-size: 22px; font-weight: 800; color: var(--white);
+      margin-bottom: 18px; display: none;
+    }
+    .footer-brand p { font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 280px; }
+    .footer-contact { display: flex; flex-direction: column; gap: 10px; }
+    .footer-contact a { display: flex; align-items: center; gap: 8px; color: #9ca3af; font-size: 14px; transition: color var(--transition); }
+    .footer-contact a:hover { color: var(--white); }
+    .footer-contact a i { color: var(--red); width: 16px; }
+    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .social-btn {
+      width: 36px; height: 36px; border-radius: 50%; background: #222;
+      display: flex; align-items: center; justify-content: center;
+      color: #9ca3af; font-size: 15px; transition: all var(--transition);
+    }
+    .social-btn:hover { background: var(--red); color: var(--white); transform: translateY(-2px); }
+    .footer-col h4 {
+      color: var(--white); font-size: 14px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 14px; color: #9ca3af; transition: color var(--transition); }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom {
+      padding: 20px 0; display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: 14px; }
+    .footer-bottom a { color: #9ca3af; }
+    .footer-bottom a:hover { color: var(--white); }
+    .footer-payments { display: flex; align-items: center; gap: 8px; }
+    .payment-icon {
+      background: #222; border: 1px solid #333; border-radius: 4px;
+      padding: 4px 8px; font-size: 12px; color: #9ca3af;
+    }
+    .footer-trust-strip {
+      background: #0a0a0a; padding: 14px 0; text-align: center;
+    }
+    .footer-trust-strip p { font-size: 12px; color: #9ca3af; }
+    .footer-trust-strip a { color: #9ca3af; }
+    .footer-trust-strip a:hover { color: var(--white); }
+
+    /* ============================================================
+       BACK TO TOP
+    ============================================================ */
+    .back-to-top {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--red); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; box-shadow: 0 4px 16px rgba(255,122,0,.4);
+      opacity: 0; visibility: hidden; transform: translateY(10px);
+      transition: all var(--transition);
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1100px) {
+      .categories-grid { grid-template-columns: repeat(4, 1fr); }
+      .products-grid    { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid      { grid-template-columns: 1fr 1fr 1fr; }
+      .footer-brand     { grid-column: span 3; }
+    }
+    @media (max-width: 900px) {
+      .hero-inner        { grid-template-columns: 1fr; padding: 48px 0 40px; text-align: center; }
+      .hero-img          { display: none; }
+      .hero-actions      { justify-content: center; }
+      .hero-trust-line   { justify-content: center; }
+      .hero-badge        { margin-left: auto; margin-right: auto; }
+      .bar2-inner        { gap: 12px; }
+      .search-pills      { display: none; }
+      .deals-grid        { grid-template-columns: 1fr; }
+      .newsletter-inner  { grid-template-columns: 1fr; gap: 20px; }
+      .seo-grid          { grid-template-columns: 1fr; }
+      .trust-items       { grid-template-columns: repeat(3, 1fr); }
+      .trust-item        { border-right: 1px solid var(--gray-300); border-bottom: 1px solid var(--gray-300); }
+      .trust-item:nth-child(3n) { border-right: none; }
+      .trust-item:nth-last-child(-n+3) { border-bottom: none; }
+      .bulk-inner        { grid-template-columns: 1fr; gap: 36px; }
+      .section-header-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+    @media (max-width: 768px) {
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .products-grid   { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid     { grid-template-columns: 1fr 1fr; }
+      .footer-brand    { grid-column: span 2; }
+      .section         { padding: 48px 0; }
+      .section-sm      { padding: 40px 0; }
+      .section-title   { font-size: clamp(22px, 5vw, 32px); }
+      .trust-items     { grid-template-columns: 1fr 1fr; }
+      .trust-item      { border-right: none; border-bottom: 1px solid var(--gray-300); }
+      .trust-item:nth-child(odd) { border-right: 1px solid var(--gray-300); }
+      .trust-item:nth-last-child(-n+2) { border-bottom: none; }
+      .product-hover-bar { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+      .product-footer  { flex-direction: row; }
+      .fav-btn         { width: 40px; height: 40px; }
+      .add-to-cart     { height: 40px; font-size: 13px; }
+      .deal-card       { min-height: 200px; }
+      .deal-card h3    { font-size: 18px; }
+      .deal-card-content { max-width: 75%; }
+      .hero-desc       { font-size: 15px; }
+      .hero-dots       { padding-bottom: 20px; }
+      .bar2            { padding: 12px 0; }
+      .logo img        { height: 36px; }
+      .bar2-action     { padding: 6px 8px; }
+    }
+    @media (max-width: 480px) {
+      .hero h1          { font-size: 22px; }
+      .hero-desc        { font-size: 14px; margin-bottom: 20px; }
+      .hero-actions     { flex-direction: column; width: 100%; }
+      .hero-actions .btn,
+      .hero-actions .hero-btn-secondary { width: 100%; justify-content: center; }
+      .hero-inner       { padding: 32px 0 24px; }
+      .hero-trust-line  { font-size: 12px; flex-wrap: wrap; justify-content: center; }
+      .hero-badge       { font-size: 10px; }
+      .categories-grid  { grid-template-columns: 1fr; gap: 10px; }
+      .category-card    { padding: 12px; }
+      .cat-img-wrap     { width: 72px; height: 72px; }
+      .products-grid    { grid-template-columns: 1fr; gap: 16px; }
+      .product-card     { max-width: 100%; }
+      .product-img-wrap { height: 180px; }
+      .product-hover-bar { bottom: 8px; }
+      .product-footer   { padding: 10px 14px; }
+      .deals-grid       { grid-template-columns: 1fr; }
+      .newsletter-row   { flex-direction: column; }
+      .newsletter-row .btn { width: 100%; }
+      .footer-grid      { grid-template-columns: 1fr; }
+      .footer-brand     { grid-column: span 1; }
+      .trust-items      { grid-template-columns: 1fr; }
+      .trust-item       { border-right: none !important; border-bottom: 1px solid var(--gray-300) !important; }
+      .trust-item:last-child { border-bottom: none !important; }
+      .container        { padding: 0 16px; }
+      .section          { padding: 40px 0; }
+      .section-title    { font-size: clamp(20px, 5vw, 28px); }
+      .section-subtitle { font-size: 14px; }
+      .bulk-ctas        { flex-direction: column; }
+      .bulk-ctas .btn,
+      .bulk-ctas .btn-secondary { width: 100%; justify-content: center; }
+      .bulk-content h2  { font-size: clamp(20px, 5vw, 28px); }
+      .bulk-value       { padding: 16px; }
+      .deal-card        { min-height: 180px; padding: 20px; }
+      .deal-card h3     { font-size: 16px; }
+      .deal-card-content { max-width: 85%; }
+      .deal-floating-badge { width: 56px; height: 56px; top: 16px; right: 16px; }
+      .agg-score        { font-size: 40px; }
+      .seo-content h2   { font-size: 22px; }
+      .newsletter-section { padding: 24px 0; }
+      .newsletter-content h2 { font-size: 24px; }
+      .footer-col h4    { margin-top: 8px; }
+    }
+
+    /* Ultrawide: cap content at 1600px */
+    @media (min-width: 1921px) {
+      :root { --max-w: 1600px; }
+      .container { padding: 0 40px; }
+      .hero-img img { max-height: 380px; }
+      .search-wrap { max-width: 700px; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- BAR 1 — TOP UTILITY BAR -->
+  <div class="bar1" role="complementary" aria-label="Contact and shipping info">
+    <div class="container">
+      <div class="bar1-left">
+        <a href="tel:18882758755" class="bar1-item"><i class="fas fa-phone"></i> 1-888-275-8755</a>
+        <div class="bar1-sep"></div>
+        <span class="bar1-item bar1-hours"><i class="fas fa-clock"></i> Mon–Fri 8AM–5PM PST</span>
+        <div class="bar1-sep"></div>
+        <span class="bar1-item"><i class="fas fa-truck"></i> Free Shipping on Orders Over <strong style="color:#fff">$75</strong></span>
+      </div>
+      <div class="bar1-right">
+        <a href="/order-tracking"><i class="fas fa-box"></i> Track Order</a>
+        <div class="bar1-sep"></div>
+        <a href="/get-quote"><i class="fas fa-file-invoice-dollar"></i> Get Quote</a>
+        <div class="bar1-sep"></div>
+        <a href="/schools-government"><i class="fas fa-university"></i> Schools &amp; Gov</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BAR 2 — MIDDLE BAR -->
+  <header class="bar2" id="bar2" role="banner">
+    <div class="container">
+      <div class="bar2-inner">
+
+        <a href="/" class="logo" aria-label="SF Cable – Home">
+          <img src="https://www.sfcable.com/media/logo/stores/1/SF-Cable-official-logo.png" alt="SF Cable" height="48" loading="eager" onerror="this.outerHTML='<span class=\'logo-wordmark\'>SFCable</span>'">
+        </a>
+
+        <div class="search-wrap" id="search-wrap">
+          <form class="search-form" role="search" action="/search" method="get" autocomplete="off">
+            <input class="search-input" id="search-input" type="search" name="q" placeholder="Search by SKU, product type, connector, cable standard, or use case" aria-label="Search products" autocomplete="off">
+            <button class="search-btn" type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+          </form>
+          <div class="search-pills">
+            <a href="/search?q=HDMI+2.1" class="search-pill"><span class="search-pill-dot" style="background:var(--red)"></span>HDMI 2.1</a>
+            <a href="/search?q=USB-C+Cables" class="search-pill"><span class="search-pill-dot" style="background:#2196F3"></span>USB-C Cables</a>
+            <a href="/search?q=Ethernet" class="search-pill"><span class="search-pill-dot" style="background:#4CAF50"></span>Ethernet</a>
+            <a href="/search?q=DisplayPort" class="search-pill"><span class="search-pill-dot" style="background:#9C27B0"></span>DisplayPort</a>
+            <a href="/search?q=Adapters" class="search-pill"><span class="search-pill-dot" style="background:#F44336"></span>Adapters</a>
+            <a href="/search?q=Bulk+Cable" class="search-pill"><span class="search-pill-dot" style="background:#FF9800"></span>Bulk Cable</a>
+          </div>
+          <div class="search-dropdown" id="search-dropdown" role="listbox"></div>
+        </div>
+
+        <div class="bar2-actions">
+          <a href="/account" class="bar2-action" aria-label="My Account">
+            <i class="fas fa-user-circle"></i>
+            <span>Account</span>
+          </a>
+          <a href="/quick-order" class="bar2-action bar2-action-quickorder" aria-label="Quick Order">
+            <i class="fas fa-bolt"></i>
+            <span>Quick Order</span>
+          </a>
+          <a href="/cart" class="bar2-action" aria-label="Shopping cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+            <span class="cart-badge" id="cart-count" aria-live="polite">0</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- BAR 3 — BOTTOM NAV BAR -->
+  <nav class="bar3" id="bar3" aria-label="Main navigation">
+    <div class="bar3-inner">
+      <a href="/" class="bar3-mini-logo" style="display:none;color:#fff;font-size:16px;font-weight:700;font-family:var(--font-heading);text-decoration:none;margin-right:auto;">SFCable</a>
+      <div class="bar3-links">
+
+        <div class="bar3-item" data-panel="ethernet">
+          <a href="/networking.html" class="bar3-link" role="button" aria-expanded="false" aria-haspopup="true">Ethernet <i class="fas fa-chevron-down bar3-chev"></i></a>
+        </div>
+        <div class="bar3-item" data-panel="fiber">
+          <a href="/fiber-optics.html" class="bar3-link" role="button" aria-expanded="false" aria-haspopup="true">Fiber Optic <i class="fas fa-chevron-down bar3-chev"></i></a>
+        </div>
+        <div class="bar3-item" data-panel="hdmi">
+          <a href="/audio-video.html" class="bar3-link" role="button" aria-expanded="false" aria-haspopup="true">HDMI / AV <i class="fas fa-chevron-down bar3-chev"></i></a>
+        </div>
+        <div class="bar3-item" data-panel="usb">
+          <a href="/usb-cables.html" class="bar3-link" role="button" aria-expanded="false" aria-haspopup="true">USB <i class="fas fa-chevron-down bar3-chev"></i></a>
+        </div>
+        <div class="bar3-item" data-panel="power">
+          <a href="/power-cords.html" class="bar3-link" role="button" aria-expanded="false" aria-haspopup="true">Power <i class="fas fa-chevron-down bar3-chev"></i></a>
+        </div>
+        <div class="bar3-item">
+          <a href="/cables.html" class="bar3-link">Cables</a>
+        </div>
+        <div class="bar3-item">
+          <a href="/adapters-connectors.html" class="bar3-link">Adapters</a>
+        </div>
+        <div class="bar3-item" data-panel="business">
+          <a href="/business" class="bar3-link" role="button" aria-expanded="false" aria-haspopup="true">Business <i class="fas fa-chevron-down bar3-chev"></i></a>
+        </div>
+
+      </div>
+      <a href="/quickrfq" class="bar3-quote"><i class="fas fa-file-alt"></i> <span>Get a Quote</span></a>
+      <button class="bar3-hamburger" id="drawer-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+
+    <!-- MEGA PANELS -->
+    <!-- Ethernet -->
+    <div class="mega-panel" id="panel-ethernet" role="region" aria-label="Ethernet navigation">
+      <div class="mega-cols mega-cols-5">
+        <div class="mega-col">
+          <div class="mega-col-head">By Standard</div>
+          <a href="/cat8-cables.html">Cat 8 Shielded (25/40GbE)</a>
+          <a href="/cat7-cables.html">Cat 7 Shielded Cables</a>
+          <a href="/cat6a-cables.html">Cat 6A Cables (10GbE)</a>
+          <a href="/cat6-cables.html">Cat 6 Cables (1GbE)</a>
+          <a href="/cat5e-cables.html">Cat 5E Cables</a>
+          <a href="/cat5-cables.html">Cat 5 (Legacy)</a>
+          <a href="/ethernet.html" class="mega-viewall">View all ethernet →</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">By Length / Bulk</div>
+          <a href="/ethernet-short.html">Short — 6in to 3ft</a>
+          <a href="/ethernet-medium.html">Medium — 5ft to 25ft</a>
+          <a href="/ethernet-long.html">Long — 50ft to 200ft</a>
+          <a href="/cat5e-bulk.html">Cat 5E Bulk Wire (spools)</a>
+          <a href="/cat6-bulk.html">Cat 6 / 6A Bulk Wire</a>
+          <a href="/bulk-1000.html">Bulk — 1,000ft spools</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">By Type</div>
+          <a href="/patch-cables.html">Patch cables (snagless)</a>
+          <a href="/flat-cables.html">Flat / slim cables</a>
+          <a href="/outdoor-cables.html">Outdoor / direct burial</a>
+          <a href="/plenum-cables.html">Plenum (CMP rated)</a>
+          <a href="/crossover-cables.html">Crossover cables</a>
+          <a href="/shielded-cables.html">Shielded (STP / FTP)</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Networking Gear</div>
+          <a href="/patch-panels.html">Patch panels</a>
+          <a href="/keystone-jacks.html">Keystone jacks / wallplates</a>
+          <a href="/networking-adapters.html">Networking adapters</a>
+          <a href="/cable-testers.html">Cable testers &amp; tools</a>
+          <a href="/crimping-tools.html">Crimping tools</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-featured">
+            <h4>Custom ethernet cables</h4>
+            <p>Any length · In-house · 2–3 day</p>
+            <a href="/quickrfq">Request a quote →</a>
+          </div>
+          <a href="/volume-pricing.html">Volume pricing — 10+ units</a>
+          <a href="/business-accounts.html">Gov · School · Corporate accounts</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HDMI / AV -->
+    <div class="mega-panel" id="panel-hdmi" role="region" aria-label="HDMI and AV navigation">
+      <div class="mega-cols mega-cols-5">
+        <div class="mega-col">
+          <div class="mega-col-head">HDMI Cables</div>
+          <a href="/hdmi-2-1.html">HDMI 2.1 (8K / 48Gbps)</a>
+          <a href="/hdmi-2-0.html">HDMI 2.0 (4K / 60Hz)</a>
+          <a href="/hdmi-1-4.html">HDMI 1.4 (1080p)</a>
+          <a href="/micro-hdmi.html">Micro HDMI (Type D)</a>
+          <a href="/mini-hdmi.html">Mini HDMI (Type C)</a>
+          <a href="/hdmi-fiber.html">Fiber Optic HDMI (75–330ft)</a>
+          <a href="/hdmi-extension.html">HDMI Extension Cables</a>
+          <a href="/hdmi.html" class="mega-viewall">View all HDMI →</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">DisplayPort / DVI / VGA</div>
+          <a href="/displayport-cables.html">DisplayPort 1.4 / 2.0</a>
+          <a href="/mini-displayport.html">Mini DisplayPort cables</a>
+          <a href="/hdmi-dvi.html">HDMI to DVI cables</a>
+          <a href="/dvi-cables.html">DVI-D / DVI-I cables</a>
+          <a href="/vga-cables.html">VGA (HD15) cables</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Audio / Video Cables</div>
+          <a href="/rca-cables.html">RCA audio / video cables</a>
+          <a href="/coaxial-cables.html">Coaxial RG6 / RG59</a>
+          <a href="/toslink.html">Toslink optical audio</a>
+          <a href="/xlr-cables.html">XLR cables</a>
+          <a href="/speaker-wire.html">Speaker wires</a>
+          <a href="/aux-cables.html">3.5mm AUX cables</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Switches &amp; Extenders</div>
+          <a href="/hdmi-switches.html">HDMI Switches</a>
+          <a href="/hdmi-splitters.html">HDMI Splitters</a>
+          <a href="/hdmi-extenders.html">HDMI Extenders over Cat5/6</a>
+          <a href="/hdmi-converters.html">HDMI Converters</a>
+          <a href="/av-switches.html">Audio/Video Switches</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Wall Plates &amp; Mounts</div>
+          <a href="/hdmi-wallplates.html">HDMI Wall Plates</a>
+          <a href="/av-wallplates.html">Audio / AV Wall Plates</a>
+          <a href="/tv-mounts.html">Flat TV Ceiling Mounts</a>
+          <a href="/speaker-accessories.html">Speaker wire in-wall</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fiber Optic -->
+    <div class="mega-panel" id="panel-fiber" role="region" aria-label="Fiber Optic navigation">
+      <div class="mega-cols mega-cols-5">
+        <div class="mega-col">
+          <div class="mega-col-head">By Connector</div>
+          <a href="/lc-to-lc.html">LC to LC</a>
+          <a href="/lc-to-sc.html">LC to SC</a>
+          <a href="/sc-to-sc.html">SC to SC</a>
+          <a href="/st-to-st.html">ST to ST / ST to LC</a>
+          <a href="/mpo-mtp.html">MPO / MTP Connectors</a>
+          <a href="/fc-connectors.html">FC Connectors</a>
+          <a href="/fiber-optics.html" class="mega-viewall">View all fiber →</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">By Mode</div>
+          <a href="/singlemode.html">Single-mode OS1 / OS2</a>
+          <a href="/om1.html">Multimode OM1 (62.5µm)</a>
+          <a href="/om2.html">Multimode OM2 (50µm)</a>
+          <a href="/om3.html">Multimode OM3 (10GbE)</a>
+          <a href="/om4.html">Multimode OM4 (40/100GbE)</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">By Type</div>
+          <a href="/fiber-simplex.html">Patch cables — simplex</a>
+          <a href="/fiber-duplex.html">Patch cables — duplex</a>
+          <a href="/fiber-12.html">12 Fiber Jacketed</a>
+          <a href="/fiber-pigtails.html">12 Fiber Pigtails</a>
+          <a href="/fiber-armored.html">Armored OM3 / OM4</a>
+          <a href="/fiber-plenum.html">Plenum / OFNP rated</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Gear &amp; Accessories</div>
+          <a href="/fiber-enclosures.html">Fiber enclosures / cassettes</a>
+          <a href="/ftth-boxes.html">FTTH Boxes</a>
+          <a href="/fiber-attenuators.html">Fixed Attenuators</a>
+          <a href="/fusion-trays.html">Fusion Trays</a>
+          <a href="/fiber-adapters.html">Fiber couplers / adapters</a>
+          <a href="/wall-mount-fiber.html">Wall-mount fiber boxes</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-featured">
+            <h4>Custom fiber optic cables</h4>
+            <p>Any connector combo · Bulk pricing</p>
+            <a href="/quickrfq">Request custom quote →</a>
+          </div>
+          <a href="/volume-pricing.html">Volume pricing — 10+ units</a>
+          <a href="/business-accounts.html">Gov · School · Corporate accounts</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- USB -->
+    <div class="mega-panel" id="panel-usb" role="region" aria-label="USB navigation">
+      <div class="mega-cols mega-cols-4">
+        <div class="mega-col">
+          <div class="mega-col-head">USB Cables</div>
+          <a href="/usb-a-to-b.html">USB-A to USB-B</a>
+          <a href="/usb-a-to-c.html">USB-A to USB-C</a>
+          <a href="/usb-c-to-c.html">USB-C to USB-C</a>
+          <a href="/usb-a-micro.html">USB-A to Micro-B</a>
+          <a href="/usb-a-mini.html">USB-A to Mini-B (5-pin)</a>
+          <a href="/usb3-cables.html">USB 3.0 / 3.1 / 3.2 cables</a>
+          <a href="/usb-extension.html">USB Extension Cables</a>
+          <a href="/file-transfer.html">File Transfer Cables</a>
+          <a href="/usb-cables.html" class="mega-viewall">View all USB →</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">USB Adapters</div>
+          <a href="/usb-c-hdmi.html">USB-C to HDMI / DP / VGA</a>
+          <a href="/usb-ps2.html">USB / PS2 (keyboard / mouse)</a>
+          <a href="/usb-keystone.html">USB Keystone Jacks</a>
+          <a href="/usb-couplers.html">USB Couplers / Adapters</a>
+          <a href="/usb-serial.html">USB to Serial (DB9 / DB25)</a>
+          <a href="/firewire-usb.html">Firewire to USB adapters</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Hubs, Extenders &amp; Charging</div>
+          <a href="/usb-hubs.html">USB-A Hubs (4-port, 7-port)</a>
+          <a href="/usb-c-hubs.html">USB-C Hubs / Docking</a>
+          <a href="/usb-extenders.html">USB Extenders</a>
+          <a href="/usb-chargers.html">USB Charging Stations</a>
+          <a href="/wall-chargers.html">USB Wall Chargers</a>
+          <a href="/car-chargers.html">Car Charger Adapters</a>
+          <a href="/ac-dc-adapters.html">AC/DC Adapters</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Mobile Accessories</div>
+          <a href="/lightning-cables.html">Lightning / Apple cables</a>
+          <a href="/ipad-iphone.html">iPad / iPhone cables</a>
+          <a href="/android-usbc.html">Android / USB-C mobile cables</a>
+          <a href="/mobile-data.html">Mobile data cables</a>
+          <a href="/phone-accessories.html">Phone cases &amp; holders</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Power -->
+    <div class="mega-panel" id="panel-power" role="region" aria-label="Power navigation">
+      <div class="mega-cols mega-cols-4">
+        <div class="mega-col">
+          <div class="mega-col-head">Computer Power Cords</div>
+          <a href="/c13-c14.html">C13 to C14 (standard PC)</a>
+          <a href="/c13-nema.html">C13 to NEMA 5-15P (wall)</a>
+          <a href="/c19-nema.html">C19 to NEMA 6-20P (high current)</a>
+          <a href="/c7-cords.html">C7 figure-8 cords</a>
+          <a href="/c5-cords.html">C5 Mickey Mouse cords</a>
+          <a href="/right-angle-power.html">Right-angle power cords</a>
+          <a href="/locking-power.html">Locking power cords (IEC)</a>
+          <a href="/power-supply.html">Power Supply Cables / Adapters</a>
+          <a href="/power-cords.html" class="mega-viewall">View all power cords →</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Extension Cords</div>
+          <a href="/nema-5-15-ext.html">NEMA 5-15 extension cords</a>
+          <a href="/nema-6-ext.html">NEMA 6-15 / 6-20 extensions</a>
+          <a href="/hospital-grade.html">Hospital-grade cords</a>
+          <a href="/power-strip-ext.html">Power strip extensions</a>
+          <a href="/heavy-duty.html">14 AWG / 12 AWG heavy duty</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Adapters &amp; Plugs</div>
+          <a href="/power-plug-adapters.html">Power Plug Adapters (travel)</a>
+          <a href="/nema-plugs.html">NEMA 1-15 / 5-15 plugs</a>
+          <a href="/iec-connectors.html">IEC inlet connectors</a>
+          <a href="/pdu-cables.html">PDU / rack power cables</a>
+          <a href="/printer-switches.html">Printer Switches</a>
+          <a href="/power-supply-wire.html">Power Supply Wire</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Bulk Wire</div>
+          <a href="/thhn-wire.html">THHN Building Wire</a>
+          <a href="/power-control.html">Power Control Cables</a>
+          <a href="/landscape-wire.html">Landscape Wire</a>
+          <a href="/fire-alarm.html">Fire Alarm Cable</a>
+          <a href="/thermostat-cable.html">Thermostat Cables</a>
+          <a href="/security-wire.html">Security Sensor Wire</a>
+          <a href="/speaker-bulk.html">Speaker Bulk Wire</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Business -->
+    <div class="mega-panel biz-panel" id="panel-business" role="region" aria-label="Business navigation">
+      <div class="mega-cols mega-cols-4">
+        <div class="mega-col">
+          <div class="mega-col-head">Quick Actions</div>
+          <a href="/quickrfq" style="font-weight:600;color:#534AB7">Request a Quote</a>
+          <a href="/quickorder" style="font-weight:600;color:#534AB7">Quick Order by SKU</a>
+          <a href="/csv-upload">Upload Order CSV</a>
+          <a href="/po-submission">Purchase Order (PO)</a>
+          <a href="/shippingtracking">Order Tracking</a>
+          <a href="/change-cancel-order">Change / Cancel Order</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Account Programs</div>
+          <a href="/net30">Schools &amp; Government — Net-30</a>
+          <a href="/tax-exempt">Tax-exempt Purchasing</a>
+          <a href="/payment_terms">Payment Terms</a>
+          <a href="/willcall">Will Call / Local Pickup</a>
+          <a href="/reseller">Reseller / OEM Accounts</a>
+          <a href="/business-forms">Business Forms</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Custom Products</div>
+          <a href="/custom-ethernet">Custom Ethernet Cables</a>
+          <a href="/custom-fiber">Custom Fiber Optic Cables</a>
+          <a href="/custom-modular">Custom Modular Adapters</a>
+          <a href="/private-label">Private Label / OEM</a>
+          <a href="/cable-configurator">Cable Configurator Tool</a>
+        </div>
+        <div class="mega-col">
+          <div class="mega-col-head">Help &amp; Resources</div>
+          <a href="/shipping">Shipping Information</a>
+          <a href="/return">Returns &amp; Refunds</a>
+          <a href="/warranty">Warranty &amp; Claims</a>
+          <a href="/technical-resources">Technical Resources</a>
+          <a href="/faqs">FAQ</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/company">About SF Cable</a>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <span class="logo-wordmark">SFCable</span>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-nav">
+      <a href="/networking.html" class="drawer-link" data-drawer-panel="ethernet">Ethernet <i class="fas fa-chevron-down"></i></a>
+      <a href="/fiber-optics.html" class="drawer-link" data-drawer-panel="fiber">Fiber Optic <i class="fas fa-chevron-down"></i></a>
+      <a href="/audio-video.html" class="drawer-link" data-drawer-panel="hdmi">HDMI / AV <i class="fas fa-chevron-down"></i></a>
+      <a href="/usb-cables.html" class="drawer-link" data-drawer-panel="usb">USB <i class="fas fa-chevron-down"></i></a>
+      <a href="/power-cords.html" class="drawer-link" data-drawer-panel="power">Power <i class="fas fa-chevron-down"></i></a>
+      <a href="/cables.html" class="drawer-link">Cables</a>
+      <a href="/adapters-connectors.html" class="drawer-link">Adapters</a>
+      <a href="/business" class="drawer-link" data-drawer-panel="business">Business <i class="fas fa-chevron-down"></i></a>
+    </div>
+    <div class="drawer-footer">
+      <a href="/quickrfq" class="btn btn-primary" style="width:100%;margin-bottom:8px;"><i class="fas fa-file-alt"></i> Get a Quote</a>
+      <div class="drawer-footer-links">
+        <a href="/order-tracking">Track Order</a>
+        <a href="/account">Account</a>
+      </div>
+      <p class="drawer-footer-phone">1-888-275-8755</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" aria-labelledby="hero-heading" aria-roledescription="carousel" aria-label="Homepage hero">
+      <div class="hero-slider">
+        <div class="hero-track" id="hero-track">
+
+          <!-- Slide 1 -->
+          <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 2">
+            <div class="container">
+              <div class="hero-inner">
+                <div class="hero-content">
+                  <div class="hero-badge"><i class="fas fa-shield-alt"></i> Trusted Connectivity Solutions</div>
+                  <h1 id="hero-heading">Premium Cables, Adapters &amp; Networking Gear</h1>
+                  <p class="hero-desc">Shop dependable connectivity products backed by a lifetime warranty and same-day shipping.</p>
+                  <p class="hero-trust-line"><i class="fas fa-check-circle"></i> Wholesale pricing · Custom cables made in-house · California-based since 2002</p>
+                  <div class="hero-actions">
+                    <a href="/cables.html" class="btn btn-primary btn-lg"><i class="fas fa-ethernet"></i> Shop Cables</a>
+                    <a href="/get-quote" class="hero-btn-secondary"><i class="fas fa-file-invoice-dollar"></i> Get a Quote</a>
+                  </div>
+                </div>
+                <div class="hero-img" aria-hidden="true">
+                  <img src="images/Slider1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 2">
+            <div class="container">
+              <div class="hero-inner">
+                <div class="hero-content">
+                  <div class="hero-badge"><i class="fas fa-boxes"></i> Bulk &amp; Custom Solutions</div>
+                  <h1>Built for Bulk Orders, Custom Projects &amp; Business Buyers</h1>
+                  <p class="hero-desc">Get volume pricing, fast quotes, and made-in-house custom cable solutions for business, IT, education, and installation needs.</p>
+                  <p class="hero-trust-line"><i class="fas fa-check-circle"></i> Bulk orders · Custom builds · Fast turnaround</p>
+                  <div class="hero-actions">
+                    <a href="/bulk-orders" class="btn btn-primary btn-lg"><i class="fas fa-boxes"></i> Bulk Orders</a>
+                    <a href="/get-quote" class="hero-btn-secondary"><i class="fas fa-file-invoice-dollar"></i> Get a Quote</a>
+                  </div>
+                </div>
+                <div class="hero-img" aria-hidden="true">
+                  <img src="images/Slider2.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="hero-dots" role="tablist" aria-label="Hero slide navigation">
+        <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1" data-slide="0"></button>
+        <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-slide="1"></button>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trust-bar" aria-label="Trust indicators">
+      <div class="container">
+        <div class="trust-items">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-medal"></i></div>
+            <div><h3>20+ Years</h3><p>Cable expertise</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
+            <div><h3>Lifetime Warranty</h3><p>Eligible products</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <div><h3>No Minimums</h3><p>No restock fee</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-shipping-fast"></i></div>
+            <div><h3>Same-Day Shipping</h3><p>In-stock items</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-undo-alt"></i></div>
+            <div><h3>60-Day Returns</h3><p>Money-back guarantee</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-headset"></i></div>
+            <div><h3>Lifetime Support</h3><p>Expert product help</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag-label">Browse by Category</span>
+          <div class="section-header-row">
+            <div>
+              <h2 class="section-title" id="categories-heading">Shop Our Top Categories</h2>
+              <p class="section-subtitle">10,000+ products across 100+ categories — everything you need in one place</p>
+            </div>
+            <a href="/categories" class="btn btn-outline">View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="categories-grid">
+          <a href="/hdmi-cables.html" class="category-card">
+            <div class="cat-img-wrap"><img src="images/Product15.jpg" alt="HDMI Cable"></div>
+            <div class="cat-text"><h3>HDMI Cables</h3><span class="cat-count">150+ Products</span></div>
+          </a>
+          <a href="/usb-cables.html" class="category-card">
+            <div class="cat-img-wrap"><img src="images/Product2.jpg" alt="USB Cable"></div>
+            <div class="cat-text"><h3>USB Cables</h3><span class="cat-count">200+ Products</span></div>
+          </a>
+          <a href="/network-cables.html" class="category-card">
+            <div class="cat-img-wrap"><img src="images/Product8.jpg" alt="Network Cable"></div>
+            <div class="cat-text"><h3>Network Cables</h3><span class="cat-count">300+ Products</span></div>
+          </a>
+          <a href="/fiber-optics.html" class="category-card">
+            <div class="cat-img-wrap"><img src="images/Product13.jpg" alt="Fiber Optic Cable"></div>
+            <div class="cat-text"><h3>Fiber Optics</h3><span class="cat-count">120+ Products</span></div>
+          </a>
+          <a href="/power-cords.html" class="category-card">
+            <div class="cat-img-wrap"><img src="images/Product17.jpg" alt="Power Cord"></div>
+            <div class="cat-text"><h3>Power Cords</h3><span class="cat-count">180+ Products</span></div>
+          </a>
+          <a href="/adapters-connectors.html" class="category-card">
+            <div class="cat-img-wrap"><img src="images/Product3.jpg" alt="USB-C Adapter"></div>
+            <div class="cat-text"><h3>Adapters &amp; Connectors</h3><span class="cat-count">400+ Products</span></div>
+          </a>
+          <a href="/audio-video.html" class="category-card">
+            <div class="cat-img-wrap"><img src="images/Product10.jpg" alt="DisplayPort Cable"></div>
+            <div class="cat-text"><h3>Audio &amp; Video</h3><span class="cat-count">250+ Products</span></div>
+          </a>
+          <a href="/accessories.html" class="category-card">
+            <div class="cat-img-wrap"><img src="images/Product7.jpg" alt="Power Extension"></div>
+            <div class="cat-text"><h3>Accessories &amp; Tools</h3><span class="cat-count">350+ Products</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section" style="background:var(--gray-50);" aria-labelledby="products-heading">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:28px;">
+          <span class="tag-label">Best Sellers</span>
+          <div class="section-header-row">
+            <div>
+              <h2 class="section-title" id="products-heading">Top-Rated Products</h2>
+              <p class="section-subtitle">Trusted by IT professionals nationwide</p>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;" role="tablist" aria-label="Filter products by category">
+              <button class="prod-tab active" role="tab" aria-selected="true" id="tab-all" tabindex="0">All</button>
+              <button class="prod-tab" role="tab" aria-selected="false" id="tab-hdmi" tabindex="-1">HDMI</button>
+              <button class="prod-tab" role="tab" aria-selected="false" id="tab-usb" tabindex="-1">USB</button>
+              <button class="prod-tab" role="tab" aria-selected="false" id="tab-network" tabindex="-1">Network</button>
+              <button class="prod-tab" role="tab" aria-selected="false" id="tab-power" tabindex="-1">Power</button>
+            </div>
+          </div>
+        </div>
+        <style>.prod-tab{height:38px;padding:0 20px;border-radius:100px;font-size:14px;font-weight:600;font-family:var(--font);border:1px solid var(--gray-300);color:var(--gray-700);background:var(--white);cursor:pointer;transition:all var(--transition)}.prod-tab:hover{background:var(--red-light);color:var(--red);border-color:var(--red)}.prod-tab.active{background:var(--red);color:var(--white);border-color:var(--red)}</style>
+
+        <div class="products-grid" id="products-grid">
+          <article class="product-card" data-category="hdmi">
+            <div class="product-img-wrap">
+              <div class="product-badges"><span class="badge badge-red">Best Seller</span></div>
+              <div class="product-hover-bar">
+                <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+              </div>
+              <img src="images/Product15.jpg" alt="HDMI 2.0 High Speed Cable">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><a href="/hdmi-2-0-cable.html">HDMI 2.0 High Speed Cable 4K@60Hz – 6 ft</a></h3>
+              <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(324)</span></div>
+              <div class="product-price"><span class="price-current">$6.99</span><span class="price-old">$9.99</span><span class="price-save">Save 30%</span></div>
+            </div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+          </article>
+
+          <article class="product-card" data-category="usb">
+            <div class="product-img-wrap">
+              <div class="product-badges"><span class="badge badge-green">In Stock</span></div>
+              <div class="product-hover-bar">
+                <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+              </div>
+              <img src="images/Product3.jpg" alt="USB-C to USB-A Cable">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><a href="/usb-c-to-usb-a.html">USB-C to USB-A 3.0 Cable – 3 ft, 10Gbps</a></h3>
+              <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(218)</span></div>
+              <div class="product-price"><span class="price-current">$5.49</span><span class="price-old">$7.99</span><span class="price-save">Save 31%</span></div>
+            </div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+          </article>
+
+          <article class="product-card" data-category="network">
+            <div class="product-img-wrap">
+              <div class="product-badges"><span class="badge badge-yellow">Bulk Pricing</span></div>
+              <div class="product-hover-bar">
+                <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+              </div>
+              <img src="images/Product9.jpg" alt="Cat6 Ethernet Cable">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><a href="/cat6-ethernet-cable.html">Cat6 Ethernet Patch Cable, Snagless – 10 ft</a></h3>
+              <div class="product-rating"><span class="stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></span><span class="rating-count">(507)</span></div>
+              <div class="product-price"><span class="price-current">$4.29</span><span class="price-old">$5.99</span><span class="price-save">Save 28%</span></div>
+            </div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+          </article>
+
+          <article class="product-card" data-category="power">
+            <div class="product-img-wrap">
+              <div class="product-badges"><span class="badge badge-red">New</span></div>
+              <div class="product-hover-bar">
+                <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+              </div>
+              <img src="images/Product17.jpg" alt="IEC Power Cord">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><a href="/iec-power-cord.html">IEC C13 to NEMA 5-15P Power Cord – 6 ft, 10A</a></h3>
+              <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(189)</span></div>
+              <div class="product-price"><span class="price-current">$7.49</span></div>
+            </div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+          </article>
+
+          <article class="product-card" data-category="hdmi">
+            <div class="product-img-wrap">
+              <div class="product-hover-bar">
+                <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+              </div>
+              <img src="images/Product10.jpg" alt="DisplayPort Cable">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><a href="/displayport-cable.html">DisplayPort 1.4 Cable 8K@30Hz – 6 ft</a></h3>
+              <div class="product-rating"><span class="stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></span><span class="rating-count">(142)</span></div>
+              <div class="product-price"><span class="price-current">$8.99</span><span class="price-old">$12.99</span><span class="price-save">Save 31%</span></div>
+            </div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+          </article>
+
+          <article class="product-card" data-category="network">
+            <div class="product-img-wrap">
+              <div class="product-badges"><span class="badge badge-yellow">Bulk Pricing</span></div>
+              <div class="product-hover-bar">
+                <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+              </div>
+              <img src="images/Product13.jpg" alt="Fiber Optic Patch Cable">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><a href="/fiber-optic-patch.html">LC to SC Fiber Optic Patch Cable, Single Mode – 3m</a></h3>
+              <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(96)</span></div>
+              <div class="product-price"><span class="price-current">$12.99</span><span class="price-old">$18.99</span><span class="price-save">Save 32%</span></div>
+            </div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+          </article>
+
+          <article class="product-card" data-category="hdmi">
+            <div class="product-img-wrap">
+              <div class="product-badges"><span class="badge badge-red">Best Seller</span></div>
+              <div class="product-hover-bar">
+                <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+              </div>
+              <img src="images/Product12.jpg" alt="HDMI to VGA Adapter">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><a href="/hdmi-to-vga-adapter.html">HDMI to VGA Active Adapter with Audio Port</a></h3>
+              <div class="product-rating"><span class="stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></span><span class="rating-count">(273)</span></div>
+              <div class="product-price"><span class="price-current">$11.99</span><span class="price-old">$15.99</span><span class="price-save">Save 25%</span></div>
+            </div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+          </article>
+
+          <article class="product-card" data-category="usb">
+            <div class="product-img-wrap">
+              <div class="product-hover-bar">
+                <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+              </div>
+              <img src="images/Product2.jpg" alt="USB 3.0 Hub">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><a href="/usb-3-hub-7-port.html">USB 3.0 7-Port Hub with Individual Switches</a></h3>
+              <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(154)</span></div>
+              <div class="product-price"><span class="price-current">$24.99</span><span class="price-old">$34.99</span><span class="price-save">Save 29%</span></div>
+            </div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP BY APPLICATION -->
+    <section class="section app-section" aria-labelledby="app-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag-label">Shop by Use Case</span>
+          <div class="section-header-row">
+            <div>
+              <h2 class="section-title" id="app-heading">Shop by Application</h2>
+              <p class="section-subtitle">Not sure what specs you need? Browse by setup to find the right cables, adapters, and accessories faster.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-tabs" role="tablist" aria-label="Application categories">
+          <button class="app-tab active" role="tab" aria-selected="true" aria-controls="app-panel-0" id="app-tab-0">Home Theater</button>
+          <button class="app-tab" role="tab" aria-selected="false" aria-controls="app-panel-1" id="app-tab-1">Server Room</button>
+          <button class="app-tab" role="tab" aria-selected="false" aria-controls="app-panel-2" id="app-tab-2">Office Networking</button>
+          <button class="app-tab" role="tab" aria-selected="false" aria-controls="app-panel-3" id="app-tab-3">School / Government</button>
+          <button class="app-tab" role="tab" aria-selected="false" aria-controls="app-panel-4" id="app-tab-4">Custom / OEM</button>
+        </div>
+
+        <div class="app-panel active" id="app-panel-0" role="tabpanel" aria-labelledby="app-tab-0">
+          <div class="app-panel-img"><img src="images/theater.jpg" alt="Home theater setup with cables and AV equipment"></div>
+          <div class="app-panel-body">
+            <h3>Home Theater</h3>
+            <p>HDMI, audio/video, wall-rated, and AV accessories for building the perfect entertainment setup.</p>
+            <div class="app-chips"><span class="app-chip">HDMI</span><span class="app-chip">Audio/Video</span><span class="app-chip">Wall Plates</span></div>
+            <div class="app-panel-cta"><a href="/home-theater" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Shop Home Theater</a></div>
+          </div>
+        </div>
+
+        <div class="app-panel" id="app-panel-1" role="tabpanel" aria-labelledby="app-tab-1">
+          <div class="app-panel-img"><img src="images/server.jpg" alt="Server room with networking cables and rack equipment"></div>
+          <div class="app-panel-body">
+            <h3>Server Room</h3>
+            <p>Ethernet, fiber, power, and rack connectivity solutions for data centers and infrastructure.</p>
+            <div class="app-chips"><span class="app-chip">Cat6/Cat6a</span><span class="app-chip">Fiber</span><span class="app-chip">Power Cords</span></div>
+            <div class="app-panel-cta"><a href="/server-room" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Explore Server Room</a></div>
+          </div>
+        </div>
+
+        <div class="app-panel" id="app-panel-2" role="tabpanel" aria-labelledby="app-tab-2">
+          <div class="app-panel-img"><img src="images/office.jpg" alt="Office networking setup with cables and adapters"></div>
+          <div class="app-panel-body">
+            <h3>Office Networking</h3>
+            <p>Network cabling, adapters, docking, and workstation essentials for modern offices.</p>
+            <div class="app-chips"><span class="app-chip">Ethernet</span><span class="app-chip">USB-C</span><span class="app-chip">Docking</span></div>
+            <div class="app-panel-cta"><a href="/office-networking" class="btn btn-primary"><i class="fas fa-arrow-right"></i> View Office Networking</a></div>
+          </div>
+        </div>
+
+        <div class="app-panel" id="app-panel-3" role="tabpanel" aria-labelledby="app-tab-3">
+          <div class="app-panel-img"><img src="images/school.jpg" alt="Classroom and government facility cabling solutions"></div>
+          <div class="app-panel-body">
+            <h3>School / Government</h3>
+            <p>Reliable connectivity solutions for classrooms, campuses, and public facilities.</p>
+            <div class="app-chips"><span class="app-chip">Bulk Orders</span><span class="app-chip">AV Setup</span><span class="app-chip">Secure Cabling</span></div>
+            <div class="app-panel-cta"><a href="/schools-government" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Browse Solutions</a></div>
+          </div>
+        </div>
+
+        <div class="app-panel" id="app-panel-4" role="tabpanel" aria-labelledby="app-tab-4">
+          <div class="app-panel-img"><img src="images/custom.jpg" alt="Custom cable manufacturing and OEM solutions"></div>
+          <div class="app-panel-body">
+            <h3>Custom / OEM</h3>
+            <p>Custom cable builds, bulk orders, and project-based sourcing tailored to your specifications.</p>
+            <div class="app-chips"><span class="app-chip">Custom Lengths</span><span class="app-chip">OEM</span><span class="app-chip">Bulk Quote</span></div>
+            <div class="app-panel-cta"><a href="/custom-oem" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Request a Quote</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BUSINESS / BULK SOLUTIONS -->
+    <section class="section bulk-section" aria-labelledby="bulk-heading">
+      <div class="container">
+        <div class="bulk-inner">
+          <div class="bulk-content">
+            <span class="tag-label">Business &amp; Bulk Solutions</span>
+            <h2 id="bulk-heading">Need Volume Pricing or Custom Cable Support?</h2>
+            <p>Get fast quotes, bulk discounts, and custom cable solutions for offices, schools, government, installers, and project-based buyers.</p>
+            <div class="bulk-ctas">
+              <a href="/get-quote" class="btn btn-primary btn-lg">
+                <i class="fas fa-file-invoice-dollar"></i> Request a Quote
+              </a>
+              <a href="/contact" class="btn-secondary">
+                <i class="fas fa-phone"></i> Contact Sales
+              </a>
+            </div>
+          </div>
+          <div class="bulk-values">
+            <div class="bulk-value">
+              <div class="bulk-value-icon"><i class="fas fa-tags"></i></div>
+              <div>
+                <h3>Volume Pricing Available</h3>
+                <p>Tiered discounts starting at 10 units. Custom pricing for large orders, schools, and government agencies.</p>
+              </div>
+            </div>
+            <div class="bulk-value">
+              <div class="bulk-value-icon"><i class="fas fa-ruler-combined"></i></div>
+              <div>
+                <h3>Custom Lengths &amp; OEM Options</h3>
+                <p>Custom cable builds, private labeling, and project-based sourcing tailored to your specifications.</p>
+              </div>
+            </div>
+            <div class="bulk-value">
+              <div class="bulk-value-icon"><i class="fas fa-headset"></i></div>
+              <div>
+                <h3>Fast Help for Business Orders</h3>
+                <p>Dedicated support for bulk buyers. Call 1-888-275-8755 or email sales@sfcable.com for same-day quotes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS SLIDER -->
+    <section class="section slider-section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag-label">Featured Products</span>
+          <div class="section-header-row">
+            <div>
+              <h2 class="section-title" id="featured-heading">Featured Products</h2>
+              <p class="section-subtitle">Handpicked from our active catalog — selected for quality, performance, and everyday demand.</p>
+            </div>
+            <a href="/featured" class="btn btn-outline">View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="slider-wrap">
+          <button class="slider-nav slider-nav-prev" id="feat-prev" aria-label="Previous products"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-nav slider-nav-next" id="feat-next" aria-label="Next products"><i class="fas fa-chevron-right"></i></button>
+          <div class="slider-track" id="feat-track">
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <div class="product-badges"><span class="badge badge-green">In Stock</span></div>
+                <div class="product-hover-bar">
+                  <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                  <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                  <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+                </div>
+                <img src="images/Product14.jpg" alt="HDMI 2.1 Fiber Optic Cable">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="/hdmi-fiber-8k.html">HDMI 2.1 Fiber Optic Cable 8K – 30 ft</a></h3>
+                <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(87)</span></div>
+                <div class="product-price"><span class="price-current">$49.99</span><span class="price-old">$69.99</span><span class="price-save">Save 29%</span></div>
+              </div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <div class="product-badges"><span class="badge badge-yellow">Bulk Pricing</span></div>
+                <div class="product-hover-bar">
+                  <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                  <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                  <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+                </div>
+                <img src="images/Product5.jpg" alt="IEC C13/C14 Power Cord">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="/c13-c14-cord.html">IEC C13/C14 Power Cord – 6 ft, 10A</a></h3>
+                <div class="product-rating"><span class="stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></span><span class="rating-count">(215)</span></div>
+                <div class="product-price"><span class="price-current">$6.49</span><span class="price-old">$8.99</span><span class="price-save">Save 28%</span></div>
+              </div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <div class="product-badges"><span class="badge badge-red">New</span></div>
+                <div class="product-hover-bar">
+                  <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                  <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                  <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+                </div>
+                <img src="images/Product4.jpg" alt="USB 2.0 A to B Cable">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="/usb-ab-6ft.html">USB 2.0 A-Male to B-Male Cable – 6 ft</a></h3>
+                <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(163)</span></div>
+                <div class="product-price"><span class="price-current">$5.99</span></div>
+              </div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <div class="product-hover-bar">
+                  <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                  <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                  <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+                </div>
+                <img src="images/Product18.jpg" alt="European Power Cord C5">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="/eu-power-cord.html">European Power Cord C5 Cloverleaf – 6 ft</a></h3>
+                <div class="product-rating"><span class="stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></span><span class="rating-count">(74)</span></div>
+                <div class="product-price"><span class="price-current">$8.99</span><span class="price-old">$12.99</span><span class="price-save">Save 31%</span></div>
+              </div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <div class="product-badges"><span class="badge badge-green">In Stock</span></div>
+                <div class="product-hover-bar">
+                  <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                  <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                  <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+                </div>
+                <img src="images/Product6.jpg" alt="DC Power Extension Cable">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="/dc-extension.html">DC Power Extension Cable 5.5mm Barrel</a></h3>
+                <div class="product-rating"><span class="stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></span><span class="rating-count">(92)</span></div>
+                <div class="product-price"><span class="price-current">$3.99</span></div>
+              </div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <div class="product-badges"><span class="badge badge-yellow">Bulk Pricing</span></div>
+                <div class="product-hover-bar">
+                  <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                  <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                  <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+                </div>
+                <img src="images/Product11.jpg" alt="DB37 Serial Extension Cable">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="/db37-cable.html">DB37 Serial Extension Cable – 6 ft</a></h3>
+                <div class="product-rating"><span class="stars" aria-label="4 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star star-empty"></i></span><span class="rating-count">(41)</span></div>
+                <div class="product-price"><span class="price-current">$14.99</span><span class="price-old">$19.99</span><span class="price-save">Save 25%</span></div>
+              </div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <div class="product-badges"><span class="badge badge-red">Best Seller</span></div>
+                <div class="product-hover-bar">
+                  <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                  <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                  <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+                </div>
+                <img src="images/Product16.jpg" alt="SCSI HPDB50 to DB25 Cable">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="/scsi-cable.html">SCSI HPDB50 to DB25 Cable – 6 ft</a></h3>
+                <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(58)</span></div>
+                <div class="product-price"><span class="price-current">$16.99</span></div>
+              </div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrap">
+                <div class="product-hover-bar">
+                  <button class="product-action-btn" aria-label="Add to wishlist" data-tooltip="Wishlist"><i class="far fa-heart"></i></button>
+                  <button class="product-action-btn" aria-label="Compare" data-tooltip="Compare"><i class="fas fa-exchange-alt"></i></button>
+                  <button class="product-action-btn" aria-label="Quick view" data-tooltip="Quick View"><i class="far fa-eye"></i></button>
+                </div>
+                <img src="images/Product1.jpg" alt="IEC C13/C14 Power Extension">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="/power-extension.html">IEC C13/C14 Power Extension – 10 ft</a></h3>
+                <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(134)</span></div>
+                <div class="product-price"><span class="price-current">$9.99</span><span class="price-old">$13.99</span><span class="price-save">Save 29%</span></div>
+              </div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEALS -->
+    <section style="padding:0;">
+      <div class="container">
+        <div class="deals-grid">
+          <a href="/bulk-orders" class="deal-card deal-1">
+            <div class="deal-card-bg"></div>
+            <div class="deal-card-overlay"></div>
+            <div class="deal-floating-badge"><span>UP TO</span><span>40%</span></div>
+            <div class="deal-card-content">
+              <div class="deal-tag"><i class="fas fa-boxes"></i> Bulk Orders</div>
+              <h3>Buy More, Save More</h3>
+              <p>Volume pricing on network cables, USB cables, and power cords. Starting at 10 units.</p>
+              <span class="btn btn-primary" style="font-size:14px;padding:10px 20px;">Shop Bulk Deals <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+          <a href="/schools-government" class="deal-card deal-2">
+            <div class="deal-card-bg"></div>
+            <div class="deal-card-overlay"></div>
+            <div class="deal-floating-badge" style="background:var(--blue);"><span>SPECIAL</span><span>EDU</span></div>
+            <div class="deal-card-content">
+              <div class="deal-tag" style="color:#93c5fd;"><i class="fas fa-university"></i> Schools &amp; Government</div>
+              <h3>EDU &amp; Gov Pricing</h3>
+              <p>Exclusive discounts for verified educational institutions and government agencies. PO accepted.</p>
+              <span class="btn" style="font-size:14px;padding:10px 20px;background:rgba(255,255,255,.15);color:#fff;">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section reviews-section" aria-labelledby="reviews-heading">
+      <div class="container">
+        <span class="tag-label">Customer Reviews</span>
+        <h2 class="section-title" id="reviews-heading" style="margin-top:8px;margin-bottom:36px;">What Our Customers Say</h2>
+        <div class="reviews-layout">
+
+          <!-- Left: Trustpilot summary -->
+          <div class="reviews-aggregate">
+            <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" alt="Trustpilot" class="tp-logo" onerror="this.outerHTML='<div style=&quot;font-size:18px;font-weight:800;color:#00b67a;margin-bottom:12px;font-family:var(--font-heading)&quot;>★ Trustpilot</div>'">
+            <div class="agg-score">4.8</div>
+            <div class="agg-stars" aria-label="4.8 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="agg-count">Based on 2,400+ reviews</div>
+            <div class="agg-label">Excellent</div>
+          </div>
+
+          <!-- Right: Review slider -->
+          <div class="review-slider-wrap">
+            <div class="review-slider-track" id="review-track">
+
+              <!-- Slide 1 -->
+              <div class="review-slide">
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="reviewer-avatar" style="background:var(--red);">MJ</div>
+                    <div><div class="reviewer-name">Marcus J.</div><div class="reviewer-company">IT Manager · TechCorp Inc.</div></div>
+                  </div>
+                  <div class="review-stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  <p class="review-text">"We've been ordering Cat6 cables in bulk for 3 years. Quality is consistently excellent and shipping is always fast."</p>
+                  <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
+                </article>
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="reviewer-avatar" style="background:var(--blue);">SR</div>
+                    <div><div class="reviewer-name">Sandra R.</div><div class="reviewer-company">Procurement · School District</div></div>
+                  </div>
+                  <div class="review-stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  <p class="review-text">"EDU pricing saved our district thousands. PO billing made procurement simple. Products arrived next day!"</p>
+                  <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
+                </article>
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="reviewer-avatar" style="background:var(--green);">DK</div>
+                    <div><div class="reviewer-name">David K.</div><div class="reviewer-company">AV Installer · ProAV Solutions</div></div>
+                  </div>
+                  <div class="review-stars" aria-label="4 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star star-empty"></i></div>
+                  <p class="review-text">"Great HDMI and DisplayPort selection at prices that make sense for contractors. Quick order saves me time."</p>
+                  <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
+                </article>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="review-slide">
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="reviewer-avatar" style="background:#7c3aed;">TL</div>
+                    <div><div class="reviewer-name">Tom L.</div><div class="reviewer-company">Network Admin · HealthFirst</div></div>
+                  </div>
+                  <div class="review-stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  <p class="review-text">"Fiber optic cables arrived perfectly terminated. Saved us hours of prep. Will order again for our next site."</p>
+                  <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
+                </article>
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="reviewer-avatar" style="background:#0d9488;">AP</div>
+                    <div><div class="reviewer-name">Anna P.</div><div class="reviewer-company">Office Manager · Creativo Agency</div></div>
+                  </div>
+                  <div class="review-stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  <p class="review-text">"Ordered USB-C docking cables for our whole office. Everything works perfectly and the price was unbeatable."</p>
+                  <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
+                </article>
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="reviewer-avatar" style="background:#d97706;">RG</div>
+                    <div><div class="reviewer-name">Robert G.</div><div class="reviewer-company">Electrician · PowerTech LLC</div></div>
+                  </div>
+                  <div class="review-stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+                  <p class="review-text">"Best source for power cords and IEC cables. Same-day shipping is a lifesaver when you're on a job site."</p>
+                  <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
+                </article>
+              </div>
+
+            </div>
+            <div class="review-dots" role="tablist" aria-label="Review pages">
+              <button class="review-dot active" role="tab" aria-label="Reviews page 1" data-slide="0"></button>
+              <button class="review-dot" role="tab" aria-label="Reviews page 2" data-slide="1"></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO + FAQ -->
+    <section class="section seo-section" aria-labelledby="seo-heading">
+      <div class="container">
+        <div class="seo-grid">
+          <div class="seo-content">
+            <h2 id="seo-heading">Your Wholesale Cable Supplier Since 2003</h2>
+            <p>SF Cable is a leading supplier of high-quality cables, adapters, connectors, and networking accessories, serving businesses, IT professionals, schools, and government agencies across the United States. With over 10,000 products in stock and same-day shipping, we make it easy to get the connectivity solutions you need — fast.</p>
+            <p>Whether you need a single HDMI cable or thousands of Cat6 patch cords for a data center, SF Cable offers wholesale pricing, a lifetime warranty on all cable products, and expert customer support.</p>
+            <h3>Why Buy Cables in Bulk from SF Cable?</h3>
+            <p>Buying in bulk means significant cost savings without sacrificing quality. All cables meet or exceed RoHS, CE, UL, and FCC standards. Volume pricing starts at 10 units with custom quotes for large projects. We serve healthcare, education, government, data centers, retail, and AV integration.</p>
+          </div>
+          <div>
+            <h2 style="font-size:22px;font-weight:800;margin-bottom:24px;">Frequently Asked Questions</h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is SF Cable's warranty policy? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">SF Cable offers a <strong>lifetime warranty</strong> on all cables and non-electronic products. If your cable fails under normal use, we'll replace it — no questions asked.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Do you offer bulk or volume discounts? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">Yes! Volume discounts apply starting at 10 units. For large orders use our <strong>Get a Quote</strong> feature. Schools and government receive additional discounts.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">How fast is shipping? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">Orders placed before <strong>1PM PST</strong> Monday–Friday ship the same day. Free standard shipping (2–5 days) on orders over $75. Expedited options available.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Do you serve schools and government agencies? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">Yes. We have a dedicated program with special pricing, PO terms, and TAA-compliant product options for educational and government buyers.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What payment methods are accepted? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">All major credit cards, PayPal, and purchase orders for qualified accounts. Net 30 terms available upon credit approval.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-inner">
+          <div class="newsletter-content">
+            <h2 id="newsletter-heading">Stay Ahead with SF Cable Deals</h2>
+            <p>Get weekly deals, product updates, and early access to special offers.</p>
+            <ul class="newsletter-perks">
+              <li class="newsletter-perk"><i class="fas fa-tag"></i> Exclusive discounts</li>
+              <li class="newsletter-perk"><i class="fas fa-box"></i> New product updates</li>
+              <li class="newsletter-perk"><i class="fas fa-bolt"></i> Early access</li>
+            </ul>
+          </div>
+          <form class="newsletter-form" aria-label="Newsletter signup">
+            <div class="newsletter-row">
+              <input class="newsletter-input" type="email" placeholder="Enter your work email" aria-label="Email address" required />
+              <button type="submit" class="btn btn-primary" style="white-space:nowrap;height:40px;padding:0 20px;font-size:13px;">Subscribe <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <p class="newsletter-note">No spam. Unsubscribe in one click. See our Privacy Policy.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://www.sfcable.com/media/logo/stores/1/SF-Cable-official-logo.png" alt="SF Cable Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="footer-brand-name">SF Cable</div>
+          <p>Your trusted source for professional cables, adapters, and connectivity solutions. Serving businesses, schools, and government since 2003.</p>
+          <div class="footer-contact">
+            <a href="tel:18882758755"><i class="fas fa-phone"></i> 1-888-275-8755</a>
+            <a href="mailto:sales@sfcable.com"><i class="fas fa-envelope"></i> sales@sfcable.com</a>
+            <a href="/contact"><i class="fas fa-map-marker-alt"></i> Fremont, CA — Mon–Fri 8AM–5PM PST</a>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="/cables.html">All Cables</a></li>
+            <li><a href="/hdmi-cables.html">HDMI Cables</a></li>
+            <li><a href="/usb-cables.html">USB Cables</a></li>
+            <li><a href="/network-cables.html">Network Cables</a></li>
+            <li><a href="/fiber-optics.html">Fiber Optics</a></li>
+            <li><a href="/power-cords.html">Power Cords</a></li>
+            <li><a href="/adapters-connectors.html">Adapters</a></li>
+            <li><a href="/audio-video.html">Audio Video</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul class="footer-links">
+            <li><a href="/order-tracking">Track My Order</a></li>
+            <li><a href="/shipping-information">Shipping Info</a></li>
+            <li><a href="/returns-refunds">Returns &amp; Refunds</a></li>
+            <li><a href="/warranty-claims">Warranty Claims</a></li>
+            <li><a href="/change-cancel-order">Change/Cancel Order</a></li>
+            <li><a href="/will-call">Will Call / Pickup</a></li>
+            <li><a href="/payment-terms">Payment Terms</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <ul class="footer-links">
+            <li><a href="/bulk-orders">Bulk Orders</a></li>
+            <li><a href="/get-quote">Request a Quote</a></li>
+            <li><a href="/schools-government">Schools &amp; Gov</a></li>
+            <li><a href="/quick-order">Quick Order</a></li>
+            <li><a href="/account">My Account</a></li>
+            <li><a href="/resellers">Reseller Program</a></li>
+            <li><a href="/net30">Net 30 Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About SF Cable</a></li>
+            <li><a href="/blog">Blog &amp; Resources</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/sitemap">Sitemap</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+            <li><a href="/accessibility">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 SF Cable, Inc. All rights reserved. Fremont, CA 94538</p>
+        <div class="footer-payments">
+          <span class="payment-icon">VISA</span>
+          <span class="payment-icon">MC</span>
+          <span class="payment-icon">AMEX</span>
+          <span class="payment-icon">Discover</span>
+          <span class="payment-icon">PayPal</span>
+          <span class="payment-icon">PO</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-trust-strip">
+      <p>SSL Secured Checkout · RoHS Compliant · TAA Compliant Products Available · GSA Schedule · <a href="/privacy-policy">Privacy Policy</a> · <a href="/terms-conditions">Terms</a></p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
+
+  <script>
+    /* Header scroll & mega-menu */
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    const backToTop = document.getElementById('back-to-top');
+    let lastY = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (bar2) { bar2.classList.toggle('scrolled', y > 10); bar2.classList.toggle('hidden', y > 140); }
+      if (bar3 && y > 140) { bar3.style.position = 'fixed'; bar3.style.top = '0'; bar3.style.left = '0'; bar3.style.right = '0'; }
+      else if (bar3) { bar3.style.position = 'sticky'; }
+      backToTop.classList.toggle('visible', y > 400);
+      lastY = y;
+    }, { passive: true });
+
+    backToTop.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+    /* Mega-menu hover */
+    let openTimer, closeTimer;
+    document.querySelectorAll('.bar3-item[data-panel]').forEach(item => {
+      const panelId = 'panel-' + item.dataset.panel;
+      const panel = document.getElementById(panelId);
+      if (!panel) return;
+      function openPanel() { clearTimeout(closeTimer); openTimer = setTimeout(() => { document.querySelectorAll('.mega-panel').forEach(p => p.classList.remove('open')); document.querySelectorAll('.bar3-item').forEach(i => i.classList.remove('open')); panel.classList.add('open'); item.classList.add('open'); item.querySelector('.bar3-link')?.setAttribute('aria-expanded','true'); }, 150); }
+      function startClose() { clearTimeout(openTimer); closeTimer = setTimeout(() => { panel.classList.remove('open'); item.classList.remove('open'); item.querySelector('.bar3-link')?.setAttribute('aria-expanded','false'); }, 120); }
+      item.addEventListener('mouseenter', openPanel);
+      item.addEventListener('mouseleave', startClose);
+      panel.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+      panel.addEventListener('mouseleave', startClose);
+      item.querySelector('.bar3-link')?.addEventListener('click', e => { e.preventDefault(); if (panel.classList.contains('open')) { startClose(); } else { openPanel(); } });
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { document.querySelectorAll('.mega-panel').forEach(p => p.classList.remove('open')); document.querySelectorAll('.bar3-item').forEach(i => { i.classList.remove('open'); i.querySelector('.bar3-link')?.setAttribute('aria-expanded','false'); }); } });
+
+    /* Mobile drawer */
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const drawerToggle = document.getElementById('drawer-toggle');
+    const drawerClose = document.getElementById('drawer-close');
+    function toggleDrawer(open) { drawer?.classList.toggle('open', open); overlay?.classList.toggle('open', open); document.body.style.overflow = open ? 'hidden' : ''; }
+    drawerToggle?.addEventListener('click', () => toggleDrawer(true));
+    drawerClose?.addEventListener('click', () => toggleDrawer(false));
+    overlay?.addEventListener('click', () => toggleDrawer(false));
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-question').forEach(b => { b.classList.remove('open'); b.setAttribute('aria-expanded','false'); });
+        if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+      });
+    });
+
+    const tabs = Array.from(document.querySelectorAll('.prod-tab'));
+    const productCards = Array.from(document.querySelectorAll('#products-grid .product-card'));
+    const categoryMap = { 'tab-all':'all', 'tab-hdmi':'hdmi', 'tab-usb':'usb', 'tab-network':'network', 'tab-power':'power' };
+    function activateTab(tab) {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); t.setAttribute('tabindex','-1'); });
+      tab.classList.add('active'); tab.setAttribute('aria-selected','true'); tab.setAttribute('tabindex','0'); tab.focus();
+      const cat = categoryMap[tab.id] || 'all';
+      productCards.forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = ''; card.style.opacity = '0'; card.style.transform = 'translateY(12px)';
+          requestAnimationFrame(() => { card.style.transition = 'opacity 0.3s ease, transform 0.3s ease'; card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
+        } else { card.style.display = 'none'; }
+      });
+    }
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => activateTab(tab));
+      tab.addEventListener('keydown', e => {
+        let idx = tabs.indexOf(tab);
+        if (e.key === 'ArrowRight') { e.preventDefault(); activateTab(tabs[(idx + 1) % tabs.length]); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); activateTab(tabs[(idx - 1 + tabs.length) % tabs.length]); }
+        if (e.key === 'Home') { e.preventDefault(); activateTab(tabs[0]); }
+        if (e.key === 'End') { e.preventDefault(); activateTab(tabs[tabs.length - 1]); }
+      });
+    });
+
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const orig = this.innerHTML;
+        this.innerHTML = '<i class="fas fa-check"></i> Added!';
+        this.style.background = 'var(--green)';
+        const c = document.getElementById('cart-count');
+        c.textContent = parseInt(c.textContent||'0') + 1;
+        setTimeout(() => { this.innerHTML = orig; this.style.background = ''; }, 1800);
+      });
+    });
+
+    document.querySelector('.newsletter-form')?.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type=submit]');
+      btn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+      btn.style.background = 'var(--green)'; btn.disabled = true;
+    });
+
+    const revealEls = document.querySelectorAll('.category-card,.product-card,.review-card');
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; ro.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => { el.style.opacity='0'; el.style.transform='translateY(20px)'; el.style.transition='opacity 0.4s ease, transform 0.4s ease'; ro.observe(el); });
+
+    /* Predictive Search */
+    (() => {
+      const input = document.getElementById('search-input');
+      const dropdown = document.getElementById('search-dropdown');
+      const wrap = document.getElementById('search-wrap');
+      if (!input || !dropdown) return;
+
+      const catalog = [
+        { name:'HDMI 2.0 High Speed Cable 4K@60Hz – 6 ft', sku:'SFC-HDMI-6FT', cat:'HDMI Cables', price:'$6.99', img:'images/Product15.jpg', url:'/hdmi-2-0-cable.html', tags:'hdmi 2.0 4k video display tv monitor cable high speed' },
+        { name:'USB-C to USB-A 3.0 Cable – 3 ft, 10Gbps', sku:'SFC-USBC-3FT', cat:'USB Cables', price:'$5.49', img:'images/Product3.jpg', url:'/usb-c-to-usb-a.html', tags:'usb c type-c usb3 adapter hub multiport thunderbolt' },
+        { name:'Cat6 Ethernet Patch Cable, Shielded – 1 ft', sku:'SFC-CAT6-1FT', cat:'Network Cables', price:'$4.29', img:'images/Product9.jpg', url:'/cat6-ethernet-cable.html', tags:'cat6 ethernet network rj45 patch lan shielded data center' },
+        { name:'IEC C13 to NEMA 5-15P Power Cord – 6 ft', sku:'SFC-PWR-6FT', cat:'Power Cords', price:'$7.49', img:'images/Product17.jpg', url:'/iec-power-cord.html', tags:'power cord iec c13 nema ac server computer monitor' },
+        { name:'DisplayPort to DVI Cable – 6 ft', sku:'SFC-DPDVI-6', cat:'Video Cables', price:'$8.99', img:'images/Product10.jpg', url:'/displayport-cable.html', tags:'displayport dp dvi video monitor display adapter' },
+        { name:'FireWire 6-Pin to 4-Pin Cable – 6 ft', sku:'SFC-FW64-6FT', cat:'FireWire', price:'$12.99', img:'images/Product13.jpg', url:'/firewire-cable.html', tags:'firewire ieee 1394 6pin 4pin dv camcorder audio' },
+        { name:'DVI-A to VGA Adapter Cable – 6 ft', sku:'SFC-DVIVGA-6', cat:'Adapters', price:'$11.99', img:'images/Product12.jpg', url:'/dvi-vga-cable.html', tags:'dvi vga adapter analog video monitor legacy' },
+        { name:'USB 2.0 A-Male to B-Male Cable – 15 ft', sku:'SFC-USB2AB-15', cat:'USB Cables', price:'$8.49', img:'images/Product2.jpg', url:'/usb-a-b-cable.html', tags:'usb 2.0 printer scanner type a b long' },
+        { name:'IEC C13/C14 Power Extension – 10 ft', sku:'SFC-PWR-EXT10', cat:'Power Cords', price:'$9.99', img:'images/Product1.jpg', url:'/power-extension.html', tags:'power extension iec c13 c14 server pdu rack ups' },
+        { name:'USB 2.0 A-Male to B-Male Cable – 6 ft', sku:'SFC-USB2AB-6', cat:'USB Cables', price:'$5.99', img:'images/Product4.jpg', url:'/usb-ab-6ft.html', tags:'usb printer cable type a b 2.0' },
+        { name:'IEC C13/C14 Power Cord – 6 ft', sku:'SFC-C13C14-6', cat:'Power Cords', price:'$6.49', img:'images/Product5.jpg', url:'/c13-c14-cord.html', tags:'power cord iec c13 c14 server ups extension' },
+        { name:'DC Power Extension Cable', sku:'SFC-DCEXT', cat:'Power Cables', price:'$3.99', img:'images/Product6.jpg', url:'/dc-extension.html', tags:'dc power barrel extension 5.5mm camera cctv security' },
+        { name:'NEMA 5-15P Power Extension – 1 ft', sku:'SFC-NEMA-1FT', cat:'Power Cords', price:'$4.99', img:'images/Product7.jpg', url:'/power-extension-1ft.html', tags:'power extension nema 5-15 short liberator outlet' },
+        { name:'Cat6 Ethernet Patch Cable – 0.5 ft', sku:'SFC-CAT6-05', cat:'Network Cables', price:'$3.49', img:'images/Product8.jpg', url:'/cat6-short.html', tags:'cat6 ethernet short patch rj45 network crossover' },
+        { name:'DB37 Serial Extension Cable – 6 ft', sku:'SFC-DB37-6FT', cat:'Serial Cables', price:'$14.99', img:'images/Product11.jpg', url:'/db37-cable.html', tags:'db37 serial parallel d-sub data 37pin rs232' },
+        { name:'HDMI 2.1 Fiber Optic Cable 8K – 30 ft', sku:'SFC-HDMI21-30', cat:'HDMI Cables', price:'$49.99', img:'images/Product14.jpg', url:'/hdmi-fiber-8k.html', tags:'hdmi 2.1 8k fiber optic active long distance 4k 120hz' },
+        { name:'SCSI HPDB50 to DB25 Cable – 6 ft', sku:'SFC-SCSI-6FT', cat:'SCSI Cables', price:'$16.99', img:'images/Product16.jpg', url:'/scsi-cable.html', tags:'scsi hpdb50 db25 parallel legacy printer data' },
+        { name:'European Power Cord C5 – 6 ft', sku:'SFC-EURC5-6', cat:'Power Cords', price:'$8.99', img:'images/Product18.jpg', url:'/eu-power-cord.html', tags:'european power cord c5 cloverleaf schuko laptop international' },
+      ];
+
+      function hl(text, q) {
+        if (!q) return text;
+        const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return text.replace(new RegExp('(' + esc + ')', 'gi'), '<mark>$1</mark>');
+      }
+
+      function render(query) {
+        const q = query.toLowerCase().trim();
+        if (!q) { dropdown.classList.remove('open'); return; }
+        const results = catalog.filter(p =>
+          p.name.toLowerCase().includes(q) || p.sku.toLowerCase().includes(q) ||
+          p.cat.toLowerCase().includes(q) || p.tags.includes(q)
+        ).slice(0, 5);
+
+        if (!results.length) {
+          dropdown.innerHTML = '<div class="sdd-empty"><i class="fas fa-search"></i>No results for "' + q.replace(/</g,'&lt;') + '"<br><span style="font-size:11px;display:block;margin-top:4px;">Try a different keyword or browse categories</span></div>';
+          dropdown.classList.add('open'); return;
+        }
+        let h = '<div class="sdd-header">Suggested Products</div>';
+        results.forEach(p => {
+          h += '<a href="' + p.url + '" class="sdd-item" role="option">'
+            + '<div class="sdd-thumb"><img src="' + p.img + '" alt=""></div>'
+            + '<div class="sdd-info"><div class="sdd-name">' + hl(p.name, q) + '</div>'
+            + '<div class="sdd-meta"><span class="sdd-sku">' + p.sku + '</span><span class="sdd-cat">' + p.cat + '</span></div></div>'
+            + '<div class="sdd-price">' + p.price + '</div></a>';
+        });
+        h += '<a href="/search?q=' + encodeURIComponent(q) + '" class="sdd-footer">View all results for "' + q.replace(/</g,'&lt;') + '" <i class="fas fa-arrow-right"></i></a>';
+        dropdown.innerHTML = h;
+        dropdown.classList.add('open');
+      }
+
+      let t;
+      input.addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => render(input.value), 120); });
+      input.addEventListener('focus', () => { if (input.value.trim()) render(input.value); });
+      document.addEventListener('click', e => { if (!wrap.contains(e.target)) dropdown.classList.remove('open'); });
+
+      document.querySelectorAll('.search-chip').forEach(chip => {
+        chip.addEventListener('click', e => {
+          e.preventDefault();
+          const q = chip.dataset.q;
+          input.value = q;
+          input.focus();
+          render(q);
+        });
+      });
+    })();
+
+    /* Review Slider */
+    (() => {
+      const track = document.getElementById('review-track');
+      const dots = Array.from(document.querySelectorAll('.review-dot'));
+      if (!track || !dots.length) return;
+      let cur = 0; const total = dots.length; let timer;
+      function goTo(i) { cur = ((i % total) + total) % total; track.style.transform = 'translateX(-' + (cur * 100) + '%)'; dots.forEach((d, j) => { d.classList.toggle('active', j === cur); d.setAttribute('aria-selected', j === cur); }); }
+      dots.forEach(d => d.addEventListener('click', () => { goTo(parseInt(d.dataset.slide)); resetTimer(); }));
+      function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(cur + 1), 7000); }
+      resetTimer();
+      const wrap = track.closest('.review-slider-wrap');
+      wrap?.addEventListener('mouseenter', () => clearInterval(timer));
+      wrap?.addEventListener('mouseleave', resetTimer);
+    })();
+
+    /* Application Tabs */
+    (() => {
+      const appTabs = Array.from(document.querySelectorAll('.app-tab'));
+      const appPanels = Array.from(document.querySelectorAll('.app-panel'));
+      if (!appTabs.length) return;
+      function showApp(idx) {
+        appTabs.forEach((t, i) => { t.classList.toggle('active', i === idx); t.setAttribute('aria-selected', i === idx); t.setAttribute('tabindex', i === idx ? '0' : '-1'); });
+        appPanels.forEach((p, i) => p.classList.toggle('active', i === idx));
+      }
+      appTabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => { showApp(i); tab.focus(); });
+        tab.addEventListener('keydown', e => {
+          if (e.key === 'ArrowRight') { e.preventDefault(); showApp((i + 1) % appTabs.length); appTabs[(i + 1) % appTabs.length].focus(); }
+          if (e.key === 'ArrowLeft') { e.preventDefault(); showApp((i - 1 + appTabs.length) % appTabs.length); appTabs[(i - 1 + appTabs.length) % appTabs.length].focus(); }
+        });
+      });
+    })();
+
+    /* Hero Slider */
+    (() => {
+      const track = document.getElementById('hero-track');
+      const dots = Array.from(document.querySelectorAll('.hero-dot'));
+      if (!track || !dots.length) return;
+      let current = 0; const total = dots.length; let autoTimer;
+
+      function goTo(idx) {
+        current = ((idx % total) + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dots.forEach((d, i) => { d.classList.toggle('active', i === current); d.setAttribute('aria-selected', i === current); });
+      }
+      dots.forEach(d => d.addEventListener('click', () => { goTo(parseInt(d.dataset.slide)); resetAuto(); }));
+
+      function resetAuto() { clearInterval(autoTimer); autoTimer = setInterval(() => goTo(current + 1), 6000); }
+      resetAuto();
+    })();
+
+    /* Featured Products Slider */
+    (() => {
+      const track = document.getElementById('feat-track');
+      const prev = document.getElementById('feat-prev');
+      const next = document.getElementById('feat-next');
+      if (!track || !prev || !next) return;
+      function getScrollAmount() {
+        const card = track.querySelector('.product-card');
+        if (!card) return 300;
+        return card.offsetWidth + 22;
+      }
+      prev.addEventListener('click', () => { track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' }); });
+      next.addEventListener('click', () => { track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' }); });
+    })();
+  </script>
+
+</body>
+</html>
