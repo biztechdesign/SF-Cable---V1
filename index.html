@@ -563,7 +563,11 @@
       border-radius: var(--radius-lg); overflow: visible;
       transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1), border-color 0.3s ease;
       position: relative;
+      display: flex; flex-direction: column;
+      align-self: stretch;
     }
+    .products-grid { align-items: stretch; }
+    .slider-track .product-card { height: auto; }
     .product-card:hover {
       box-shadow: 0 12px 40px rgba(0,0,0,.1); border-color: var(--dark);
       transform: translateY(-6px);
@@ -573,7 +577,7 @@
     .product-img-wrap {
       background: var(--white); padding: 28px 24px;
       display: flex; align-items: center; justify-content: center;
-      height: 200px; position: relative; overflow: visible;
+      height: 200px; flex-shrink: 0; position: relative; overflow: visible;
       border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     }
     .product-img-wrap img {
@@ -630,11 +634,15 @@
     .product-action-btn:hover::after { opacity: 1; }
 
     /* Product info area */
-    .product-info { padding: 16px 18px 14px; background: var(--white); }
+    .product-info {
+      padding: 16px 18px 14px; background: var(--white);
+      flex: 1 1 auto; display: flex; flex-direction: column;
+    }
     .product-name {
       font-size: 16px; font-weight: 600; color: var(--dark); margin: 0 0 8px;
       line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2;
       -webkit-box-orient: vertical; overflow: hidden;
+      min-height: calc(1.45em * 2);
     }
     .product-name a { color: inherit; transition: color 0.2s ease; }
     .product-name a:hover { color: var(--red); }
@@ -652,9 +660,10 @@
     /* Footer actions */
     .product-footer {
       padding: 12px 18px 14px; border-top: 1px solid var(--gray-300);
-      display: flex; gap: 8px;
+      display: flex; gap: 8px; align-items: center;
       border-radius: 0 0 var(--radius-lg) var(--radius-lg);
       background: var(--white);
+      margin-top: auto; flex-shrink: 0;
     }
     .fav-btn {
       width: var(--control-h); height: var(--control-h); flex-shrink: 0;
@@ -679,6 +688,21 @@
       transform: translateY(-1px);
     }
     .add-to-cart:active { transform: translateY(0); box-shadow: none; }
+    .view-details {
+      flex: 1; background: var(--white); color: var(--red);
+      border: 2px solid var(--red);
+      height: var(--control-h); padding: 0 16px;
+      border-radius: 100px; font-size: 14px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      transition: all 0.25s cubic-bezier(.4,0,.2,1);
+      font-family: var(--font); cursor: pointer;
+    }
+    .view-details:hover {
+      background: var(--red); color: var(--white);
+      box-shadow: 0 4px 14px rgba(255,122,0,.35);
+      transform: translateY(-1px);
+    }
+    .view-details:active { transform: translateY(0); box-shadow: none; }
 
     /* ============================================================
        SHOP BY APPLICATION (Tab-based)
@@ -741,6 +765,7 @@
     .slider-wrap { position: relative; }
     .slider-track {
       display: flex; gap: 22px; overflow-x: auto;
+      align-items: stretch;
       scroll-behavior: smooth; scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none; padding-bottom: 4px;
@@ -1952,7 +1977,7 @@
               <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(218)</span></div>
               <div class="product-price"><span class="price-current">$5.49</span><span class="price-old">$7.99</span><span class="price-save">Save 31%</span></div>
             </div>
-            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><a href="/usb-c-to-usb-a.html" class="view-details"><i class="far fa-eye"></i> View Details</a></div>
           </article>
 
           <article class="product-card" data-category="network">
@@ -2005,7 +2030,7 @@
               <div class="product-rating"><span class="stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></span><span class="rating-count">(142)</span></div>
               <div class="product-price"><span class="price-current">$8.99</span><span class="price-old">$12.99</span><span class="price-save">Save 31%</span></div>
             </div>
-            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+            <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><a href="/displayport-cable.html" class="view-details"><i class="far fa-eye"></i> View Details</a></div>
           </article>
 
           <article class="product-card" data-category="network">
@@ -2268,7 +2293,7 @@
                 <div class="product-rating"><span class="stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></span><span class="rating-count">(74)</span></div>
                 <div class="product-price"><span class="price-current">$8.99</span><span class="price-old">$12.99</span><span class="price-save">Save 31%</span></div>
               </div>
-              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><a href="/eu-power-cord.html" class="view-details"><i class="far fa-eye"></i> View Details</a></div>
             </article>
 
             <article class="product-card">
@@ -2322,7 +2347,7 @@
                 <div class="product-rating"><span class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="rating-count">(58)</span></div>
                 <div class="product-price"><span class="price-current">$16.99</span></div>
               </div>
-              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><button class="add-to-cart"><i class="fas fa-cart-shopping"></i> Add to Cart</button></div>
+              <div class="product-footer"><button class="fav-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button><a href="/scsi-cable.html" class="view-details"><i class="far fa-eye"></i> View Details</a></div>
             </article>
 
             <article class="product-card">
