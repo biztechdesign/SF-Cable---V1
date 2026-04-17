@@ -59,7 +59,7 @@
     ============================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
-    html, body { max-width: 100%; overflow-x: hidden; }
+    html, body { max-width: 100%; overflow-x: clip; }
     body {
       font-family: var(--font);
       color: var(--dark);
@@ -157,7 +157,6 @@
       transition: box-shadow 0.2s ease, transform 0.3s ease;
     }
     .bar2.scrolled { box-shadow: var(--shadow); }
-    .bar2.hidden { transform: translateY(-100%); pointer-events: none; }
     .bar2-inner {
       display: grid; grid-template-columns: auto 1fr auto;
       align-items: center; gap: 24px;
@@ -2684,14 +2683,18 @@
     const bar2 = document.getElementById('bar2');
     const bar3 = document.getElementById('bar3');
     const backToTop = document.getElementById('back-to-top');
-    let lastY = 0;
+    function syncHeaderStack() {
+      if (!bar2 || !bar3) return;
+      const h = bar2.offsetHeight;
+      bar3.style.top = h + 'px';
+    }
+    syncHeaderStack();
+    window.addEventListener('resize', syncHeaderStack, { passive: true });
+    window.addEventListener('load', syncHeaderStack);
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
-      if (bar2) { bar2.classList.toggle('scrolled', y > 10); bar2.classList.toggle('hidden', y > 140); }
-      if (bar3 && y > 140) { bar3.style.position = 'fixed'; bar3.style.top = '0'; bar3.style.left = '0'; bar3.style.right = '0'; }
-      else if (bar3) { bar3.style.position = 'sticky'; }
+      if (bar2) { bar2.classList.toggle('scrolled', y > 10); }
       backToTop.classList.toggle('visible', y > 400);
-      lastY = y;
     }, { passive: true });
 
     backToTop.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
