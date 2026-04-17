@@ -182,15 +182,12 @@
       display: flex; gap: 12px; margin-top: 6px; justify-content: center; flex-wrap: wrap;
     }
     .search-pill {
-      display: inline-flex; align-items: center; gap: 4px;
+      display: inline-flex; align-items: center;
       font-size: 11px; color: var(--gray-700); font-weight: 600; text-decoration: none;
-      background: var(--gray-100); padding: 3px 10px; border-radius: 100px;
+      background: var(--gray-100); padding: 3px 12px; border-radius: 100px;
       transition: all var(--transition);
     }
     .search-pill:hover { background: var(--red-light); color: var(--red); }
-    .search-pill-dot {
-      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
-    }
 
     /* Predictive dropdown */
     .search-dropdown {
@@ -509,8 +506,7 @@
       justify-content: center; flex-shrink: 0;
     }
     .trust-icon i { font-size: 18px; color: var(--red); }
-    .trust-item h3 { font-size: 14px; font-weight: 700; color: var(--dark); line-height: 1.3; font-family: var(--font); }
-    .trust-item p { font-size: 12px; color: var(--gray-500); margin-top: 2px; line-height: 1.4; }
+    .trust-item p { font-size: 13px; font-weight: 600; color: var(--dark); line-height: 1.35; font-family: var(--font); }
 
     /* ============================================================
        CATEGORIES
@@ -954,27 +950,15 @@
     ============================================================ */
     .reviews-section { background: var(--gray-50); }
     .reviews-layout {
-      display: grid; grid-template-columns: 280px 1fr; gap: 32px; align-items: start;
+      display: block;
     }
-    /* Left: Trustpilot summary card */
-    .reviews-aggregate {
-      text-align: center;
-      background: var(--white); border: 1px solid var(--gray-300);
-      border-radius: var(--radius-lg); padding: 32px 28px;
-      position: sticky; top: 120px;
-    }
-    .tp-logo { margin: 0 auto 16px; height: 28px; width: auto; }
-    .agg-score { font-size: 52px; font-weight: 800; color: var(--dark); line-height: 1; }
-    .agg-stars { color: #f59e0b; font-size: 20px; margin: 8px 0 6px; display: flex; gap: 3px; justify-content: center; }
-    .agg-count { font-size: 12px; color: var(--gray-500); }
-    .agg-label { font-size: 11px; color: var(--gray-500); margin-top: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-    /* Right: Review slider */
+    /* Review slider */
     .review-slider-wrap { position: relative; overflow: hidden; }
     .review-slider-track {
       display: flex; transition: transform 0.5s cubic-bezier(.4,0,.2,1);
     }
     .review-slide {
-      flex: 0 0 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      flex: 0 0 100%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
       min-width: 0;
     }
     .review-card {
@@ -1005,9 +989,10 @@
       border: none; cursor: pointer; transition: all 0.3s ease;
     }
     .review-dot.active { background: var(--red); width: 24px; border-radius: 100px; }
+    @media (max-width: 1100px) {
+      .review-slide { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (max-width: 900px) {
-      .reviews-layout { grid-template-columns: 1fr; }
-      .reviews-aggregate { position: static; max-width: 280px; margin: 0 auto; }
       .review-slide { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 480px) {
@@ -1110,6 +1095,73 @@
       background: #222; border: 1px solid #333; border-radius: 4px;
       padding: 4px 8px; font-size: 12px; color: #9ca3af;
     }
+    /* Certifications / Reviews row */
+    .footer-trust-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 32px; flex-wrap: wrap;
+      padding: 28px 0; border-bottom: 1px solid #222;
+    }
+    .footer-certs {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    }
+    .cert-logo {
+      background: var(--white); border-radius: 6px; padding: 8px 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 54px; min-width: 84px;
+    }
+    .cert-cmas { flex-direction: column; gap: 2px; line-height: 1.1; padding: 6px 14px; }
+    .cert-cmas .cmas-top { font-size: 20px; font-weight: 800; color: #0B2A4A; letter-spacing: .5px; font-family: var(--font-heading); }
+    .cert-cmas .cmas-top em { color: #7cb342; font-style: normal; font-weight: 800; }
+    .cert-cmas .cmas-sub { font-size: 8px; font-weight: 700; color: #0B2A4A; letter-spacing: .5px; text-transform: uppercase; }
+    .cert-gsa { gap: 8px; padding: 8px 14px; }
+    .cert-gsa .gsa-mark { font-size: 20px; font-weight: 800; color: #0B2A4A; font-family: var(--font-heading); letter-spacing: 1px; }
+    .cert-gsa .gsa-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .cert-gsa .gsa-title { font-size: 13px; font-weight: 700; color: #1F2937; }
+    .cert-gsa .gsa-contract { font-size: 9px; color: #6b7280; letter-spacing: .3px; }
+    .cert-bbb { background: #0B3D91; padding: 0; overflow: hidden; }
+    .cert-bbb-inner {
+      display: inline-flex; align-items: stretch; height: 100%;
+    }
+    .cert-bbb-mark {
+      background: #0B3D91; color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      padding: 0 14px; font-family: var(--font-heading);
+      font-size: 22px; font-weight: 800; letter-spacing: 1px;
+    }
+    .cert-bbb-text {
+      background: var(--white); color: #0B3D91;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 0 14px; line-height: 1.1; text-align: center;
+    }
+    .cert-bbb-text .bbb-1 { font-size: 10px; font-weight: 700; letter-spacing: .5px; }
+    .cert-bbb-text .bbb-2 { font-size: 13px; font-weight: 800; letter-spacing: .5px; }
+    .cert-bbb-text .bbb-3 { font-size: 10px; font-weight: 700; letter-spacing: .5px; }
+    .cert-bbb-rating {
+      display: flex; flex-direction: column; justify-content: center;
+      color: #e5e7eb; font-size: 12px; line-height: 1.3;
+    }
+    .cert-bbb-rating strong { color: var(--white); font-size: 13px; font-weight: 700; }
+    .cert-bbb-rating a { color: #9ca3af; font-size: 11px; text-decoration: underline; }
+    .cert-bbb-rating a:hover { color: var(--white); }
+
+    .footer-reviews-badge {
+      background: #0B2A4A; border-radius: var(--radius-lg);
+      padding: 14px 18px; display: inline-flex; align-items: center; gap: 12px;
+      min-width: 220px;
+    }
+    .yotpo-seal {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: radial-gradient(circle at 50% 45%, #4a9fd4 0%, #2c7cb0 70%, #1a5a8a 100%);
+      border: 2px dashed rgba(255,255,255,.6);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: var(--white); flex-shrink: 0;
+    }
+    .yotpo-seal .yseal-num { font-size: 13px; font-weight: 800; line-height: 1; font-family: var(--font-heading); }
+    .yotpo-seal .yseal-stars { font-size: 7px; color: #f59e0b; margin-top: 2px; letter-spacing: .5px; }
+    .yotpo-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .yotpo-text .yt-title { color: var(--white); font-size: 13px; font-weight: 700; }
+    .yotpo-text .yt-sub { color: #9ca3af; font-size: 11px; margin-top: 2px; }
+
     .footer-trust-strip {
       background: #0a0a0a; padding: 14px 0; text-align: center;
     }
@@ -1164,6 +1216,8 @@
       .products-grid   { grid-template-columns: repeat(2, 1fr); }
       .footer-grid     { grid-template-columns: 1fr 1fr; }
       .footer-brand    { grid-column: span 2; }
+      .footer-trust-row { justify-content: center; gap: 20px; }
+      .footer-certs    { justify-content: center; }
       .section         { padding: 48px 0; }
       .section-sm      { padding: 40px 0; }
       .section-title   { font-size: clamp(22px, 5vw, 32px); }
@@ -1256,9 +1310,9 @@
       <div class="bar1-right">
         <a href="/order-tracking"><i class="fas fa-box"></i> Track Order</a>
         <div class="bar1-sep"></div>
-        <a href="/get-quote"><i class="fas fa-file-invoice-dollar"></i> Get Quote</a>
+        <a href="/contact"><i class="fas fa-envelope"></i> Contact</a>
         <div class="bar1-sep"></div>
-        <a href="/schools-government"><i class="fas fa-university"></i> Schools &amp; Gov</a>
+        <a href="/blog"><i class="fas fa-rss"></i> Blog</a>
       </div>
     </div>
   </div>
@@ -1278,12 +1332,12 @@
             <button class="search-btn" type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
           </form>
           <div class="search-pills">
-            <a href="/search?q=HDMI+2.1" class="search-pill"><span class="search-pill-dot" style="background:var(--red)"></span>HDMI 2.1</a>
-            <a href="/search?q=USB-C+Cables" class="search-pill"><span class="search-pill-dot" style="background:#2196F3"></span>USB-C Cables</a>
-            <a href="/search?q=Ethernet" class="search-pill"><span class="search-pill-dot" style="background:#4CAF50"></span>Ethernet</a>
-            <a href="/search?q=DisplayPort" class="search-pill"><span class="search-pill-dot" style="background:#9C27B0"></span>DisplayPort</a>
-            <a href="/search?q=Adapters" class="search-pill"><span class="search-pill-dot" style="background:#F44336"></span>Adapters</a>
-            <a href="/search?q=Bulk+Cable" class="search-pill"><span class="search-pill-dot" style="background:#FF9800"></span>Bulk Cable</a>
+            <a href="/search?q=HDMI+2.1" class="search-pill">HDMI 2.1</a>
+            <a href="/search?q=USB-C+Cables" class="search-pill">USB-C Cables</a>
+            <a href="/search?q=Ethernet" class="search-pill">Ethernet</a>
+            <a href="/search?q=DisplayPort" class="search-pill">DisplayPort</a>
+            <a href="/search?q=Adapters" class="search-pill">Adapters</a>
+            <a href="/search?q=Bulk+Cable" class="search-pill">Bulk Cable</a>
           </div>
           <div class="search-dropdown" id="search-dropdown" role="listbox"></div>
         </div>
@@ -1722,27 +1776,27 @@
         <div class="trust-items">
           <div class="trust-item">
             <div class="trust-icon"><i class="fas fa-medal"></i></div>
-            <div><h3>20+ Years</h3><p>Cable expertise</p></div>
+            <div><p>20+ Years of Cable Expertise</p></div>
           </div>
           <div class="trust-item">
             <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
-            <div><h3>Lifetime Warranty</h3><p>Eligible products</p></div>
+            <div><p>Lifetime Warranty on Eligible Products</p></div>
           </div>
           <div class="trust-item">
             <div class="trust-icon"><i class="fas fa-hand-holding-usd"></i></div>
-            <div><h3>No Minimums</h3><p>No restock fee</p></div>
+            <div><p>No Minimums and No Restock Fee</p></div>
           </div>
           <div class="trust-item">
             <div class="trust-icon"><i class="fas fa-shipping-fast"></i></div>
-            <div><h3>Same-Day Shipping</h3><p>In-stock items</p></div>
+            <div><p>Same-Day Shipping on In-Stock Items</p></div>
           </div>
           <div class="trust-item">
             <div class="trust-icon"><i class="fas fa-undo-alt"></i></div>
-            <div><h3>60-Day Returns</h3><p>Money-back guarantee</p></div>
+            <div><p>60-Day Money-Back Guarantee</p></div>
           </div>
           <div class="trust-item">
             <div class="trust-icon"><i class="fas fa-headset"></i></div>
-            <div><h3>Lifetime Support</h3><p>Expert product help</p></div>
+            <div><p>Lifetime Support from Product Experts</p></div>
           </div>
         </div>
       </div>
@@ -1799,7 +1853,7 @@
     </section>
 
     <!-- FEATURED PRODUCTS -->
-    <section class="section" style="background:var(--gray-50);" aria-labelledby="products-heading">
+    <section class="section" style="background:var(--gray-50);padding-bottom:0;" aria-labelledby="products-heading">
       <div class="container">
         <div class="section-header" style="margin-bottom:28px;">
           <span class="tag-label">Best Sellers</span>
@@ -2249,7 +2303,7 @@
     </section>
 
     <!-- DEALS -->
-    <section style="padding:0;">
+    <section class="deals-section" style="background:var(--gray-50);padding:0;">
       <div class="container">
         <div class="deals-grid">
           <a href="/bulk-orders" class="deal-card deal-1">
@@ -2285,16 +2339,7 @@
         <h2 class="section-title" id="reviews-heading" style="margin-top:8px;margin-bottom:36px;">What Our Customers Say</h2>
         <div class="reviews-layout">
 
-          <!-- Left: Trustpilot summary -->
-          <div class="reviews-aggregate">
-            <img src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" alt="Trustpilot" class="tp-logo" onerror="this.outerHTML='<div style=&quot;font-size:18px;font-weight:800;color:#00b67a;margin-bottom:12px;font-family:var(--font-heading)&quot;>★ Trustpilot</div>'">
-            <div class="agg-score">4.8</div>
-            <div class="agg-stars" aria-label="4.8 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <div class="agg-count">Based on 2,400+ reviews</div>
-            <div class="agg-label">Excellent</div>
-          </div>
-
-          <!-- Right: Review slider -->
+          <!-- Review slider -->
           <div class="review-slider-wrap">
             <div class="review-slider-track" id="review-track">
 
@@ -2327,10 +2372,6 @@
                   <p class="review-text">"Great HDMI and DisplayPort selection at prices that make sense for contractors. Quick order saves me time."</p>
                   <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
                 </article>
-              </div>
-
-              <!-- Slide 2 -->
-              <div class="review-slide">
                 <article class="review-card">
                   <div class="review-header">
                     <div class="reviewer-avatar" style="background:#7c3aed;">TL</div>
@@ -2340,6 +2381,10 @@
                   <p class="review-text">"Fiber optic cables arrived perfectly terminated. Saved us hours of prep. Will order again for our next site."</p>
                   <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
                 </article>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="review-slide">
                 <article class="review-card">
                   <div class="review-header">
                     <div class="reviewer-avatar" style="background:#0d9488;">AP</div>
@@ -2356,6 +2401,24 @@
                   </div>
                   <div class="review-stars" aria-label="4.5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
                   <p class="review-text">"Best source for power cords and IEC cables. Same-day shipping is a lifesaver when you're on a job site."</p>
+                  <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
+                </article>
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="reviewer-avatar" style="background:#0ea5e9;">JM</div>
+                    <div><div class="reviewer-name">Jessica M.</div><div class="reviewer-company">Data Center Lead · CloudNex</div></div>
+                  </div>
+                  <div class="review-stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  <p class="review-text">"Bulk SFP+ and fiber patch cables shipped same-day. Lifetime warranty gives us real peace of mind on long runs."</p>
+                  <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
+                </article>
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="reviewer-avatar" style="background:#be123c;">EC</div>
+                    <div><div class="reviewer-name">Elena C.</div><div class="reviewer-company">Facilities · Metro Medical</div></div>
+                  </div>
+                  <div class="review-stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  <p class="review-text">"Customer service helped us spec the right power cords across three buildings. Delivered early and packaged well."</p>
                   <div class="review-tag"><span class="review-verified"><i class="fas fa-check-circle"></i> Verified Purchase</span></div>
                 </article>
               </div>
@@ -2508,6 +2571,49 @@
           </ul>
         </div>
       </div>
+
+      <!-- Trust / Certifications / Reviews Row -->
+      <div class="footer-trust-row" aria-label="Certifications and reviews">
+        <div class="footer-certs">
+          <a href="/certifications#cmas" class="cert-logo cert-cmas" aria-label="CMAS - California Multiple Award Schedules">
+            <span class="cmas-top">CM<em>A</em>S</span>
+            <span class="cmas-sub">California Multiple Award Schedules</span>
+          </a>
+          <a href="/certifications#gsa" class="cert-logo cert-gsa" aria-label="GSA Contract Holder - GS35F012CA">
+            <span class="gsa-mark">GSA</span>
+            <span class="gsa-text">
+              <span class="gsa-title">Contract Holder</span>
+              <span class="gsa-contract">Contract #: GS35F012CA</span>
+            </span>
+          </a>
+          <a href="https://www.bbb.org/" class="cert-logo cert-bbb" aria-label="BBB Accredited Business" rel="noopener">
+            <span class="cert-bbb-inner">
+              <span class="cert-bbb-mark">BBB</span>
+              <span class="cert-bbb-text">
+                <span class="bbb-1">ACCREDITED</span>
+                <span class="bbb-2">BUSINESS</span>
+                <span class="bbb-3">&nbsp;</span>
+              </span>
+            </span>
+          </a>
+          <div class="cert-bbb-rating">
+            <strong>BBB Rating: A+</strong>
+            <span>As of 4/16/2026</span>
+            <a href="https://www.bbb.org/" rel="noopener">Click for Profile</a>
+          </div>
+        </div>
+        <a href="/reviews" class="footer-reviews-badge" aria-label="7,780 Certified Reviews, powered by YOTPO">
+          <span class="yotpo-seal">
+            <span class="yseal-num">7,780</span>
+            <span class="yseal-stars">★★★★★</span>
+          </span>
+          <span class="yotpo-text">
+            <span class="yt-title">Certified Reviews</span>
+            <span class="yt-sub">Powered by YOTPO</span>
+          </span>
+        </a>
+      </div>
+
       <div class="footer-bottom">
         <p>© 2024 SF Cable, Inc. All rights reserved. Fremont, CA 94538</p>
         <div class="footer-payments">
